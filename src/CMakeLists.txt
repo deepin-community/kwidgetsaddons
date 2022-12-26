@@ -6,86 +6,179 @@ add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
 ecm_create_qm_loader(KF5WidgetsAddons kwidgetsaddons5_qt)
 
 target_sources(KF5WidgetsAddons PRIVATE
-  kacceleratormanager.cpp
-  kanimatedbutton.cpp
-  kbusyindicatorwidget.cpp
-  kcharselect.cpp
-  kcharselectdata.cpp
-  kcollapsiblegroupbox.cpp
-  kcolorbutton.cpp
-  kcolumnresizer.cpp
-  kdatecombobox.cpp
-  kdatepicker.cpp
-  kdatetable.cpp
-  kdatetimeedit.cpp
-  kfontaction.cpp
-  knewpasswordwidget.cpp
-  kfontsizeaction.cpp
-  kpopupframe.cpp
-  kselectaction.cpp
-  ktimecombobox.cpp
-  kdragwidgetdecorator.cpp
-  kdualaction.cpp
-  kfontchooser.cpp
-  kfontchooserdialog.cpp
-  kguiitem.cpp
-  kled.cpp
-  kmessagebox.cpp
-  kmessagebox_p.cpp
-  kmultitabbar.cpp
-  kstandardguiitem.cpp
-  kurllabel.cpp # Not good enough quality. Needs to use QUrl instead of QString and should not inherit QLabel, but hold it as a member instead.
-  kcapacitybar.cpp
-  kfontrequester.cpp
-  kpassworddialog.cpp
-  kruler.cpp
-  krecentfilesmenu.cpp
-  kselector.cpp
-  kxyselector.cpp
-  kseparator.cpp
-  ksqueezedtextlabel.cpp
-  ktitlewidget.cpp
-  ktoggleaction.cpp
-  ktogglefullscreenaction.cpp
-  kviewstateserializer.cpp
-  kviewstatemaintainerbase.cpp
-  keditlistwidget.cpp
-  kcursor.cpp
-  kratingwidget.cpp
-  kratingpainter.cpp
-  kactionselector.cpp
-  kcolorcombo.cpp
-  ktoolbarspaceraction.cpp
-  kpixmapregionselectordialog.cpp
-  kpixmapregionselectorwidget.cpp
-  kactionmenu.cpp
-  ktoolbarlabelaction.cpp
-  ktoolbarpopupaction.cpp
-  kpagedialog.cpp
-  kpagemodel.cpp
-  kpageview.cpp
-  kpageview_p.cpp
-  kpagewidget.cpp
-  kpagewidgetmodel.cpp
-  kassistantdialog.cpp
-  kmessagewidget.cpp
-  kmessagedialog.cpp
-  knewpassworddialog.cpp
-  lineediturldropeventfilter.cpp
-  kpasswordlineedit.cpp
-  kpixmapsequence.cpp
-  kpixmapsequenceoverlaypainter.cpp
-  kpixmapsequencewidget.cpp
-  kmimetypechooser.cpp
-  kmimetypeeditor.cpp
-  common_helpers.cpp
-  ksplittercollapserbutton.cpp
-  kstyleextensions.cpp
-  ktooltipwidget.cpp
-  ktwofingerswipe.cpp
-  ktwofingertap.cpp
+    common_helpers.cpp
+    common_helpers_p.h
+    fonthelpers_p.h
+    kacceleratormanager.cpp
+    kacceleratormanager.h
+    kacceleratormanager_p.h
+    kactionmenu.cpp
+    kactionmenu.h
+    kactionselector.cpp
+    kactionselector.h
+    kanimatedbutton.cpp
+    kanimatedbutton.h
+    kassistantdialog.cpp
+    kassistantdialog.h
+    kbusyindicatorwidget.cpp
+    kbusyindicatorwidget.h
+    kcapacitybar.cpp
+    kcapacitybar.h
+    kcharselect.cpp
+    kcharselectdata.cpp
+    kcharselectdata_p.h
+    kcharselect.h
+    kcharselect_p.h
+    kcollapsiblegroupbox.cpp
+    kcollapsiblegroupbox.h
+    kcolorbutton.cpp
+    kcolorbutton.h
+    kcolorcombo.cpp
+    kcolorcombo.h
+    kcolumnresizer.cpp
+    kcolumnresizer.h
+    kcursor.cpp
+    kcursor.h
+    kcursor_p.h
+    kdatecombobox.cpp
+    kdatecombobox.h
+    kdatepicker.cpp
+    kdatepicker.h
+    kdatepicker_p.h
+    kdatetable.cpp
+    kdatetable_p.h
+    kdatetimeedit.cpp
+    kdatetimeedit.h
+    kdragwidgetdecorator.cpp
+    kdragwidgetdecorator.h
+    kdualaction.cpp
+    kdualaction.h
+    kdualaction_p.h
+    keditlistwidget.cpp
+    keditlistwidget.h
+    kfontaction.cpp
+    kfontaction.h
+    kfontchooser.cpp
+    kfontchooserdialog.cpp
+    kfontchooserdialog.h
+    kfontchooser.h
+    kfontrequester.cpp
+    kfontrequester.h
+    kfontsizeaction.cpp
+    kfontsizeaction.h
+    kguiitem.cpp
+    kguiitem.h
+    kled.cpp
+    kled.h
+    kmessagebox.cpp
+    kmessageboxdontaskagaininterface.h
+    kmessagebox.h
+    kmessageboxnotifyinterface.h
+    kmessagebox_p.cpp
+    kmessagebox_p.h
+    kmessagedialog.cpp
+    kmessagedialog.h
+    kmessagewidget.cpp
+    kmessagewidget.h
+    kmimetypechooser.cpp
+    kmimetypechooser.h
+    kmimetypeeditor.cpp
+    kmimetypeeditor.h
+    kmultitabbar.cpp
+    kmultitabbar.h
+    kmultitabbar_p.h
+    knewpassworddialog.cpp
+    knewpassworddialog.h
+    knewpasswordwidget.cpp
+    knewpasswordwidget.h
+    kpagedialog.cpp
+    kpagedialog.h
+    kpagedialog_p.h
+    kpagemodel.cpp
+    kpagemodel.h
+    kpagemodel_p.h
+    kpageview.cpp
+    kpageview.h
+    kpageview_p.cpp
+    kpageview_p.h
+    kpagewidget.cpp
+    kpagewidget.h
+    kpagewidgetmodel.cpp
+    kpagewidgetmodel.h
+    kpagewidgetmodel_p.h
+    kpagewidget_p.h
+    kpassworddialog.cpp
+    kpassworddialog.h
+    kpasswordlineedit.cpp
+    kpasswordlineedit.h
+    kpixmapregionselectordialog.cpp
+    kpixmapregionselectordialog.h
+    kpixmapregionselectorwidget.cpp
+    kpixmapregionselectorwidget.h
+    kpixmapsequence.cpp
+    kpixmapsequence.h
+    kpixmapsequenceoverlaypainter.cpp
+    kpixmapsequenceoverlaypainter.h
+    kpixmapsequencewidget.cpp
+    kpixmapsequencewidget.h
+    kpopupframe.cpp
+    kpopupframe.h
+    kratingpainter.cpp
+    kratingpainter.h
+    kratingwidget.cpp
+    kratingwidget.h
+    krecentfilesmenu.cpp
+    krecentfilesmenu.h
+    kruler.cpp
+    kruler.h
+    kselectaction.cpp
+    kselectaction.h
+    kselectaction_p.h
+    kselector.cpp
+    kselector.h
+    kseparator.cpp
+    kseparator.h
+    ksplittercollapserbutton.cpp
+    ksplittercollapserbutton.h
+    ksqueezedtextlabel.cpp
+    ksqueezedtextlabel.h
+    kstandardguiitem.cpp
+    kstandardguiitem.h
+    kstyleextensions.cpp
+    kstyleextensions.h
+    ktimecombobox.cpp
+    ktimecombobox.h
+    ktitlewidget.cpp
+    ktitlewidget.h
+    ktoggleaction.cpp
+    ktoggleaction.h
+    ktoggleaction_p.h
+    ktogglefullscreenaction.cpp
+    ktogglefullscreenaction.h
+    ktoolbarlabelaction.cpp
+    ktoolbarlabelaction.h
+    ktoolbarpopupaction.cpp
+    ktoolbarpopupaction.h
+    ktoolbarspaceraction.cpp
+    ktoolbarspaceraction.h
+    ktooltipwidget.cpp
+    ktooltipwidget.h
+    ktwofingerswipe.cpp
+    ktwofingerswipe.h
+    ktwofingertap.cpp
+    ktwofingertap.h
+    kurllabel.cpp # Not good enough quality. Needs to use QUrl instead of QString and should not inherit QLabel, but hold it as a member instead.
+    kurllabel.h
+    kviewstatemaintainerbase.cpp
+    kviewstatemaintainerbase.h
+    kviewstateserializer.cpp
+    kviewstateserializer.h
+    kxyselector.cpp
+    kxyselector.h
+    lineediturldropeventfilter.cpp
+    lineediturldropeventfilter.h
 
-  icons.qrc
+    icons.qrc
 )
 
 set(kwidgetsaddons_UI_SRCS)
@@ -116,9 +209,9 @@ ecm_generate_export_header(KF5WidgetsAddons
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
+target_link_libraries(KF5WidgetsAddons PUBLIC Qt${QT_MAJOR_VERSION}::Widgets)
 
-target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons>")
+target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
 
 set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
@@ -297,10 +390,10 @@ install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TA
 install(FILES
   ${KWidgetsAddons_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
 
-install(FILES kcharselect-data  DESTINATION  ${KDE_INSTALL_DATADIR_KF5}/kcharselect)
+install(FILES kcharselect-data  DESTINATION  ${KDE_INSTALL_DATADIR_KF}/kcharselect)
 
 if (BUILD_QCH)
     ecm_add_qch(
@@ -341,5 +434,5 @@ ecm_qt_install_logging_categories(
 )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons)
+ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

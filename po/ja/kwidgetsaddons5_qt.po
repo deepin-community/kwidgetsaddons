@@ -46,13 +46,13 @@ msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
 msgstr "モノスペース"
 
-#: fonthelpers_p.h:89
+#: fonthelpers_p.h:90
 #, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
-#: fonthelpers_p.h:93
+#: fonthelpers_p.h:94
 #, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
@@ -106,172 +106,177 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "完了"
 
-#: kcharselect-translation.cpp:11
+#: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "All"
+msgstr ""
+
+#: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
 msgstr "ヨーロッパの文字"
 
-#: kcharselect-translation.cpp:12
+#: kcharselect-translation.cpp:13
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
 msgstr "アフリカの文字"
 
-#: kcharselect-translation.cpp:13
+#: kcharselect-translation.cpp:14
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
 msgstr "中東の文字"
 
-#: kcharselect-translation.cpp:14
+#: kcharselect-translation.cpp:15
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
 msgstr "中央アジアの文字"
 
-#: kcharselect-translation.cpp:15
+#: kcharselect-translation.cpp:16
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
 msgstr "南アジアの文字"
 
-#: kcharselect-translation.cpp:16
+#: kcharselect-translation.cpp:17
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
 msgstr "東南アジアの文字"
 
-#: kcharselect-translation.cpp:17
+#: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
 msgstr "インドネシアとオセアニアの文字"
 
-#: kcharselect-translation.cpp:18
+#: kcharselect-translation.cpp:19
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
 msgstr "東アジアの文字"
 
-#: kcharselect-translation.cpp:19
+#: kcharselect-translation.cpp:20
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
 msgstr "アメリカの文字"
 
-#: kcharselect-translation.cpp:20
+#: kcharselect-translation.cpp:21
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "記号"
 
-#: kcharselect-translation.cpp:21
+#: kcharselect-translation.cpp:22
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "数学記号"
 
-#: kcharselect-translation.cpp:22
+#: kcharselect-translation.cpp:23
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "音声記号"
 
-#: kcharselect-translation.cpp:23 kcharselectdata.cpp:744
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "合成可能なダイアクリティカルマーク"
 
-#: kcharselect-translation.cpp:24
+#: kcharselect-translation.cpp:25
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "その他"
 
-#: kcharselect-translation.cpp:25
+#: kcharselect-translation.cpp:26
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
 msgstr "基本ラテン文字"
 
-#: kcharselect-translation.cpp:26
+#: kcharselect-translation.cpp:27
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
 msgstr "ラテン-1 追加"
 
-#: kcharselect-translation.cpp:27
+#: kcharselect-translation.cpp:28
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
 msgstr "ラテン文字拡張 A"
 
-#: kcharselect-translation.cpp:28
+#: kcharselect-translation.cpp:29
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
 msgstr "ラテン文字拡張 B"
 
-#: kcharselect-translation.cpp:29
+#: kcharselect-translation.cpp:30
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
 msgstr "IPA 拡張 (国際音声記号)"
 
-#: kcharselect-translation.cpp:30
+#: kcharselect-translation.cpp:31
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
 msgstr "前進を伴う修飾文字"
 
-#: kcharselect-translation.cpp:31
+#: kcharselect-translation.cpp:32
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
 msgstr "合成可能なダイアクリティカルマーク"
 
-#: kcharselect-translation.cpp:32
+#: kcharselect-translation.cpp:33
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
 msgstr "ギリシャ文字とコプト文字"
 
-#: kcharselect-translation.cpp:33
+#: kcharselect-translation.cpp:34
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
 msgstr "キリル文字"
 
-#: kcharselect-translation.cpp:34
+#: kcharselect-translation.cpp:35
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
 msgstr "キリル文字追加"
 
-#: kcharselect-translation.cpp:35
+#: kcharselect-translation.cpp:36
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "アルメニア文字"
 
-#: kcharselect-translation.cpp:36
+#: kcharselect-translation.cpp:37
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "ヘブライ語"
 
-#: kcharselect-translation.cpp:37
+#: kcharselect-translation.cpp:38
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "アラビア語"
 
-#: kcharselect-translation.cpp:38
+#: kcharselect-translation.cpp:39
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
 msgstr "シリア文字"
 
-#: kcharselect-translation.cpp:39
+#: kcharselect-translation.cpp:40
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
 msgstr "アラビア文字追加"
 
-#: kcharselect-translation.cpp:40
+#: kcharselect-translation.cpp:41
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "ターナ文字"
 
-#: kcharselect-translation.cpp:41
+#: kcharselect-translation.cpp:42
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "ンコ文字"
 
-#: kcharselect-translation.cpp:42
+#: kcharselect-translation.cpp:43
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
 msgstr "サマリア文字"
 
-#: kcharselect-translation.cpp:43
+#: kcharselect-translation.cpp:44
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
 msgstr ""
 
-#: kcharselect-translation.cpp:44
+#: kcharselect-translation.cpp:45
 #, fuzzy
 #| msgctxt "KCharSelectData|KCharselect unicode block name"
 #| msgid "Cyrillic Supplement"
@@ -279,222 +284,222 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
 msgstr "キリル文字追加"
 
-#: kcharselect-translation.cpp:45
+#: kcharselect-translation.cpp:46
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
 msgstr "ラテン文字拡張 A"
 
-#: kcharselect-translation.cpp:46
+#: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "デーヴァナーガリー文字"
 
-#: kcharselect-translation.cpp:47
+#: kcharselect-translation.cpp:48
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "ベンガル文字"
 
-#: kcharselect-translation.cpp:48
+#: kcharselect-translation.cpp:49
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
 msgstr "グルムキー文字"
 
-#: kcharselect-translation.cpp:49
+#: kcharselect-translation.cpp:50
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
 msgstr "グジャラート文字"
 
-#: kcharselect-translation.cpp:50
+#: kcharselect-translation.cpp:51
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
 msgstr "オリヤー文字"
 
-#: kcharselect-translation.cpp:51
+#: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
 msgstr "タミル文字"
 
-#: kcharselect-translation.cpp:52
+#: kcharselect-translation.cpp:53
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
 msgstr "テルグ文字"
 
-#: kcharselect-translation.cpp:53
+#: kcharselect-translation.cpp:54
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
 msgstr "カンナダ文字"
 
-#: kcharselect-translation.cpp:54
+#: kcharselect-translation.cpp:55
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
 msgstr "マラヤーラム文字"
 
-#: kcharselect-translation.cpp:55
+#: kcharselect-translation.cpp:56
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
 msgstr "シンハラ文字"
 
-#: kcharselect-translation.cpp:56
+#: kcharselect-translation.cpp:57
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
 msgstr "タイ語"
 
-#: kcharselect-translation.cpp:57
+#: kcharselect-translation.cpp:58
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lao"
 msgstr "ラーオ文字"
 
-#: kcharselect-translation.cpp:58
+#: kcharselect-translation.cpp:59
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "チベット文字"
 
-#: kcharselect-translation.cpp:59
+#: kcharselect-translation.cpp:60
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
 msgstr "ビルマ文字"
 
-#: kcharselect-translation.cpp:60
+#: kcharselect-translation.cpp:61
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
 msgstr "グルジア文字"
 
-#: kcharselect-translation.cpp:61
+#: kcharselect-translation.cpp:62
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
 msgstr "ハングル字母"
 
-#: kcharselect-translation.cpp:62
+#: kcharselect-translation.cpp:63
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "エチオピア文字"
 
-#: kcharselect-translation.cpp:63
+#: kcharselect-translation.cpp:64
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
 msgstr "エチオピア文字追加"
 
-#: kcharselect-translation.cpp:64
+#: kcharselect-translation.cpp:65
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
 msgstr "チェロキー文字"
 
-#: kcharselect-translation.cpp:65
+#: kcharselect-translation.cpp:66
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "統合カナダ先住民音節文字"
 
-#: kcharselect-translation.cpp:66
+#: kcharselect-translation.cpp:67
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
 msgstr "オガム文字"
 
-#: kcharselect-translation.cpp:67
+#: kcharselect-translation.cpp:68
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Runic"
 msgstr "ルーン文字"
 
-#: kcharselect-translation.cpp:68
+#: kcharselect-translation.cpp:69
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
 msgstr "タガログ文字"
 
-#: kcharselect-translation.cpp:69
+#: kcharselect-translation.cpp:70
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
 msgstr "ハヌノオ文字"
 
-#: kcharselect-translation.cpp:70
+#: kcharselect-translation.cpp:71
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "ブヒッド文字"
 
-#: kcharselect-translation.cpp:71
+#: kcharselect-translation.cpp:72
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
 msgstr "タグバンワ文字"
 
-#: kcharselect-translation.cpp:72
+#: kcharselect-translation.cpp:73
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
 msgstr "クメール文字"
 
-#: kcharselect-translation.cpp:73
+#: kcharselect-translation.cpp:74
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mongolian"
 msgstr "モンゴル文字"
 
-#: kcharselect-translation.cpp:74
+#: kcharselect-translation.cpp:75
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "統合カナダ先住民音節文字拡張"
 
-#: kcharselect-translation.cpp:75
+#: kcharselect-translation.cpp:76
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
 msgstr "リンブ文字"
 
-#: kcharselect-translation.cpp:76
+#: kcharselect-translation.cpp:77
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "タイ・レ文字"
 
-#: kcharselect-translation.cpp:77
+#: kcharselect-translation.cpp:78
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "新タイ・ルー文字"
 
-#: kcharselect-translation.cpp:78
+#: kcharselect-translation.cpp:79
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
 msgstr "クメール記号"
 
-#: kcharselect-translation.cpp:79
+#: kcharselect-translation.cpp:80
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
 msgstr "ブギス文字"
 
-#: kcharselect-translation.cpp:80
+#: kcharselect-translation.cpp:81
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr "ラーンナータム文字"
 
-#: kcharselect-translation.cpp:81
+#: kcharselect-translation.cpp:82
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
 msgstr "合成可能なダイアクリティカルマーク"
 
-#: kcharselect-translation.cpp:82
+#: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "バリ文字"
 
-#: kcharselect-translation.cpp:83
+#: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
 msgstr "スンダ文字"
 
-#: kcharselect-translation.cpp:84
+#: kcharselect-translation.cpp:85
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
 msgstr "カタカナ"
 
-#: kcharselect-translation.cpp:85
+#: kcharselect-translation.cpp:86
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr "レプチャ文字"
 
-#: kcharselect-translation.cpp:86
+#: kcharselect-translation.cpp:87
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr "オル・チキ文字"
 
-#: kcharselect-translation.cpp:87
+#: kcharselect-translation.cpp:88
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
 msgstr "キリル文字拡張 A"
 
-#: kcharselect-translation.cpp:88
+#: kcharselect-translation.cpp:89
 #, fuzzy
 #| msgctxt "KCharSelectData|KCharselect unicode block name"
 #| msgid "Geometric Shapes Extended"
@@ -502,568 +507,568 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
 msgstr "幾何学模様拡張"
 
-#: kcharselect-translation.cpp:89
+#: kcharselect-translation.cpp:90
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
 msgstr "ラテン-1 追加"
 
-#: kcharselect-translation.cpp:90
+#: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
 msgstr "ヴェーダ拡張"
 
-#: kcharselect-translation.cpp:91
+#: kcharselect-translation.cpp:92
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
 msgstr "表音拡張"
 
-#: kcharselect-translation.cpp:92
+#: kcharselect-translation.cpp:93
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
 msgstr "表音拡張追加"
 
-#: kcharselect-translation.cpp:93
+#: kcharselect-translation.cpp:94
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
 msgstr "合成可能なダイアクリティカルマーク追加"
 
-#: kcharselect-translation.cpp:94
+#: kcharselect-translation.cpp:95
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
 msgstr "ラテン文字拡張追加"
 
-#: kcharselect-translation.cpp:95
+#: kcharselect-translation.cpp:96
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
 msgstr "ギリシャ文字拡張"
 
-#: kcharselect-translation.cpp:96
+#: kcharselect-translation.cpp:97
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "一般的な句読点"
 
-#: kcharselect-translation.cpp:97
+#: kcharselect-translation.cpp:98
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
 msgstr "上付き文字と下付き文字"
 
-#: kcharselect-translation.cpp:98
+#: kcharselect-translation.cpp:99
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
 msgstr "通貨記号"
 
-#: kcharselect-translation.cpp:99
+#: kcharselect-translation.cpp:100
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "合成可能な記号用ダイアクリティカルマーク"
 
-#: kcharselect-translation.cpp:100
+#: kcharselect-translation.cpp:101
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
 msgstr "文字様記号"
 
-#: kcharselect-translation.cpp:101
+#: kcharselect-translation.cpp:102
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
 msgstr "数字に準じるもの"
 
-#: kcharselect-translation.cpp:102
+#: kcharselect-translation.cpp:103
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr "矢印"
 
-#: kcharselect-translation.cpp:103
+#: kcharselect-translation.cpp:104
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
 msgstr "数学演算子"
 
-#: kcharselect-translation.cpp:104
+#: kcharselect-translation.cpp:105
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
 msgstr "その他の技術用記号"
 
-#: kcharselect-translation.cpp:105
+#: kcharselect-translation.cpp:106
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
 msgstr "制御文字用記号"
 
-#: kcharselect-translation.cpp:106
+#: kcharselect-translation.cpp:107
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
 msgstr "光学式文字認識"
 
-#: kcharselect-translation.cpp:107
+#: kcharselect-translation.cpp:108
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
 msgstr "囲み英数字"
 
-#: kcharselect-translation.cpp:108
+#: kcharselect-translation.cpp:109
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
 msgstr "罫線素片"
 
-#: kcharselect-translation.cpp:109
+#: kcharselect-translation.cpp:110
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
 msgstr "ブロック要素"
 
-#: kcharselect-translation.cpp:110
+#: kcharselect-translation.cpp:111
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
 msgstr "幾何学模様"
 
-#: kcharselect-translation.cpp:111
+#: kcharselect-translation.cpp:112
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
 msgstr "その他の記号"
 
 # http://en.wikipedia.org/wiki/Dingbat
-#: kcharselect-translation.cpp:112
+#: kcharselect-translation.cpp:113
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
 msgstr "装飾文字 (Dingbat)"
 
-#: kcharselect-translation.cpp:113
+#: kcharselect-translation.cpp:114
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "その他の数学記号 A"
 
-#: kcharselect-translation.cpp:114
+#: kcharselect-translation.cpp:115
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
 msgstr "補助矢印 A"
 
-#: kcharselect-translation.cpp:115
+#: kcharselect-translation.cpp:116
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
 msgstr "ブライユ点字図形"
 
-#: kcharselect-translation.cpp:116
+#: kcharselect-translation.cpp:117
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
 msgstr "補助矢印 B"
 
-#: kcharselect-translation.cpp:117
+#: kcharselect-translation.cpp:118
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "その他の数学記号 B"
 
-#: kcharselect-translation.cpp:118
+#: kcharselect-translation.cpp:119
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
 msgstr "数学演算子追加"
 
-#: kcharselect-translation.cpp:119
+#: kcharselect-translation.cpp:120
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "その他の記号と矢印"
 
-#: kcharselect-translation.cpp:120
+#: kcharselect-translation.cpp:121
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "グラゴル文字"
 
-#: kcharselect-translation.cpp:121
+#: kcharselect-translation.cpp:122
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
 msgstr "ラテン文字拡張 C"
 
-#: kcharselect-translation.cpp:122
+#: kcharselect-translation.cpp:123
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
 msgstr "コプト文字"
 
-#: kcharselect-translation.cpp:123
+#: kcharselect-translation.cpp:124
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Supplement"
 msgstr "グルジア文字追加"
 
-#: kcharselect-translation.cpp:124
+#: kcharselect-translation.cpp:125
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
 msgstr "ティフナグ文字"
 
-#: kcharselect-translation.cpp:125
+#: kcharselect-translation.cpp:126
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
 msgstr "エチオピア文字拡張"
 
-#: kcharselect-translation.cpp:126
+#: kcharselect-translation.cpp:127
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
 msgstr "キリル文字拡張 A"
 
-#: kcharselect-translation.cpp:127
+#: kcharselect-translation.cpp:128
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Punctuation"
 msgstr "句読点追加"
 
-#: kcharselect-translation.cpp:128
+#: kcharselect-translation.cpp:129
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
 msgstr "CJK 部首追加"
 
-#: kcharselect-translation.cpp:129
+#: kcharselect-translation.cpp:130
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
 msgstr "康熙部首"
 
-#: kcharselect-translation.cpp:130
+#: kcharselect-translation.cpp:131
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
 msgstr "漢字構成記述文字"
 
-#: kcharselect-translation.cpp:131
+#: kcharselect-translation.cpp:132
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
 msgstr "CJK 記号と句読点"
 
-#: kcharselect-translation.cpp:132
+#: kcharselect-translation.cpp:133
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "ひらがな"
 
-#: kcharselect-translation.cpp:133
+#: kcharselect-translation.cpp:134
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
 msgstr "カタカナ"
 
-#: kcharselect-translation.cpp:134
+#: kcharselect-translation.cpp:135
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "注音符号 (ボポモフォ)"
 
-#: kcharselect-translation.cpp:135
+#: kcharselect-translation.cpp:136
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
 msgstr "ハングル互換字母"
 
-#: kcharselect-translation.cpp:136
+#: kcharselect-translation.cpp:137
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "漢文用記号"
 
-#: kcharselect-translation.cpp:137
+#: kcharselect-translation.cpp:138
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
 msgstr "注音符号 (ボポモフォ) 拡張"
 
-#: kcharselect-translation.cpp:138
+#: kcharselect-translation.cpp:139
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Strokes"
 msgstr "CJK 字画"
 
-#: kcharselect-translation.cpp:139
+#: kcharselect-translation.cpp:140
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana Phonetic Extensions"
 msgstr "カタカナ表音拡張"
 
-#: kcharselect-translation.cpp:140
+#: kcharselect-translation.cpp:141
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed CJK Letters and Months"
 msgstr "CJK 囲み文字と月"
 
-#: kcharselect-translation.cpp:141
+#: kcharselect-translation.cpp:142
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility"
 msgstr "CJK 互換文字"
 
-#: kcharselect-translation.cpp:142
+#: kcharselect-translation.cpp:143
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
 msgstr "CJK 統合漢字拡張 A"
 
-#: kcharselect-translation.cpp:143
+#: kcharselect-translation.cpp:144
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
 msgstr "易経の六十四卦記号"
 
-#: kcharselect-translation.cpp:144
+#: kcharselect-translation.cpp:145
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
 msgstr "CJK 統合漢字"
 
-#: kcharselect-translation.cpp:145
+#: kcharselect-translation.cpp:146
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Syllables"
 msgstr "イ音節文字"
 
-#: kcharselect-translation.cpp:146
+#: kcharselect-translation.cpp:147
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
 msgstr "イ文字部首"
 
-#: kcharselect-translation.cpp:147
+#: kcharselect-translation.cpp:148
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr "フレイザー文字"
 
-#: kcharselect-translation.cpp:148
+#: kcharselect-translation.cpp:149
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "ヴァイ文字"
 
-#: kcharselect-translation.cpp:149
+#: kcharselect-translation.cpp:150
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
 msgstr "キリル文字拡張 B"
 
-#: kcharselect-translation.cpp:150
+#: kcharselect-translation.cpp:151
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "バムン文字"
 
-#: kcharselect-translation.cpp:151
+#: kcharselect-translation.cpp:152
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
 msgstr "声調記号"
 
-#: kcharselect-translation.cpp:152
+#: kcharselect-translation.cpp:153
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
 msgstr "ラテン文字拡張 D"
 
-#: kcharselect-translation.cpp:153
+#: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "シロティ・ナグリ文字"
 
-#: kcharselect-translation.cpp:154
+#: kcharselect-translation.cpp:155
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
 msgstr "インド系共通数字"
 
-#: kcharselect-translation.cpp:155
+#: kcharselect-translation.cpp:156
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr "パスパ文字"
 
-#: kcharselect-translation.cpp:156
+#: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr "サウラシュトラ文字"
 
-#: kcharselect-translation.cpp:157
+#: kcharselect-translation.cpp:158
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
 msgstr "デーヴァナーガリー文字拡張"
 
-#: kcharselect-translation.cpp:158
+#: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr "カヤー文字"
 
-#: kcharselect-translation.cpp:159
+#: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "ルジャン文字"
 
-#: kcharselect-translation.cpp:160
+#: kcharselect-translation.cpp:161
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
 msgstr "ハングル字母拡張 A"
 
-#: kcharselect-translation.cpp:161
+#: kcharselect-translation.cpp:162
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
 msgstr "ジャワ文字"
 
-#: kcharselect-translation.cpp:162
+#: kcharselect-translation.cpp:163
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
 msgstr "ビルマ文字拡張 A"
 
-#: kcharselect-translation.cpp:163
+#: kcharselect-translation.cpp:164
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
 msgstr "チャム文字"
 
-#: kcharselect-translation.cpp:164
+#: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
 msgstr "ビルマ文字拡張 A"
 
-#: kcharselect-translation.cpp:165
+#: kcharselect-translation.cpp:166
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "ベトナム・タイ文字"
 
-#: kcharselect-translation.cpp:166
+#: kcharselect-translation.cpp:167
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek Extensions"
 msgstr "マニプリ文字"
 
-#: kcharselect-translation.cpp:167
+#: kcharselect-translation.cpp:168
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
 msgstr "エチオピア文字拡張 A"
 
-#: kcharselect-translation.cpp:168
+#: kcharselect-translation.cpp:169
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
 msgstr "ラテン文字拡張 A"
 
-#: kcharselect-translation.cpp:169
+#: kcharselect-translation.cpp:170
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
 msgstr "キリル文字追加"
 
-#: kcharselect-translation.cpp:170
+#: kcharselect-translation.cpp:171
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
 msgstr "マニプリ文字"
 
-#: kcharselect-translation.cpp:171
+#: kcharselect-translation.cpp:172
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
 msgstr "ハングル音節文字"
 
-#: kcharselect-translation.cpp:172
+#: kcharselect-translation.cpp:173
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
 msgstr "ハンクル字母拡張 B"
 
-#: kcharselect-translation.cpp:173
+#: kcharselect-translation.cpp:174
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
 msgstr "上位サロゲート"
 
-#: kcharselect-translation.cpp:174
+#: kcharselect-translation.cpp:175
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
 msgstr "私用の上位サロゲート"
 
-#: kcharselect-translation.cpp:175
+#: kcharselect-translation.cpp:176
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
 msgstr "下位サロゲート"
 
-#: kcharselect-translation.cpp:176
+#: kcharselect-translation.cpp:177
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Private Use Area"
 msgstr "私用領域"
 
-#: kcharselect-translation.cpp:177
+#: kcharselect-translation.cpp:178
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
 msgstr "CJK 互換漢字"
 
-#: kcharselect-translation.cpp:178
+#: kcharselect-translation.cpp:179
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
 msgstr "アルファベット表示形"
 
-#: kcharselect-translation.cpp:179
+#: kcharselect-translation.cpp:180
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
 msgstr "アラビア表示形 A"
 
-#: kcharselect-translation.cpp:180
+#: kcharselect-translation.cpp:181
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
 msgstr "異体字セレクタ"
 
-#: kcharselect-translation.cpp:181
+#: kcharselect-translation.cpp:182
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vertical Forms"
 msgstr "縦書き用句読点"
 
-#: kcharselect-translation.cpp:182
+#: kcharselect-translation.cpp:183
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
 msgstr "合成可能な半記号"
 
-#: kcharselect-translation.cpp:183
+#: kcharselect-translation.cpp:184
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Forms"
 msgstr "CJK 互換形"
 
-#: kcharselect-translation.cpp:184
+#: kcharselect-translation.cpp:185
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
 msgstr "小字形変種"
 
-#: kcharselect-translation.cpp:185
+#: kcharselect-translation.cpp:186
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
 msgstr "アラビア表示形 B"
 
-#: kcharselect-translation.cpp:186
+#: kcharselect-translation.cpp:187
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "半角/全角文字形"
 
-#: kcharselect-translation.cpp:187
+#: kcharselect-translation.cpp:188
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Specials"
 msgstr "特殊用途"
 
-#: kcharselect-translation.cpp:189
+#: kcharselect-translation.cpp:190
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
 msgstr "麻雀牌"
 
-#: kcharselect-translation.cpp:190
+#: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
 msgstr "ドミノ牌"
 
-#: kcharselect-translation.cpp:191
+#: kcharselect-translation.cpp:192
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
 msgstr "トランプカード"
 
-#: kcharselect-translation.cpp:192
+#: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
 msgstr "囲み英数字補助"
 
-#: kcharselect-translation.cpp:193
+#: kcharselect-translation.cpp:194
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
 msgstr "囲み表意文字補助"
 
-#: kcharselect-translation.cpp:194
+#: kcharselect-translation.cpp:195
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
 msgstr "その他の記号および絵文字"
 
-#: kcharselect-translation.cpp:195
+#: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Emoticons"
 msgstr "感情アイコン"
 
-#: kcharselect-translation.cpp:196
+#: kcharselect-translation.cpp:197
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ornamental Dingbats"
 msgstr "オーナメント"
 
-#: kcharselect-translation.cpp:197
+#: kcharselect-translation.cpp:198
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
 msgstr "交通および地図の記号"
 
-#: kcharselect-translation.cpp:198
+#: kcharselect-translation.cpp:199
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alchemical Symbols"
 msgstr "錬金術記号"
 
-#: kcharselect-translation.cpp:199
+#: kcharselect-translation.cpp:200
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
 msgstr "幾何学模様拡張"
 
-#: kcharselect-translation.cpp:200
+#: kcharselect-translation.cpp:201
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
 msgstr "補助矢印 C"
 
-#: kcharselect-translation.cpp:201
+#: kcharselect-translation.cpp:202
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
 msgstr "補助記号および絵文字"
 
-#: kcharselect-translation.cpp:202
+#: kcharselect-translation.cpp:203
 #, fuzzy
 #| msgctxt "KCharSelectData|KCharselect unicode block name"
 #| msgid "Khmer Symbols"
@@ -1071,7 +1076,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
 msgstr "クメール記号"
 
-#: kcharselect-translation.cpp:203
+#: kcharselect-translation.cpp:204
 #, fuzzy
 #| msgctxt "KCharSelectData|KCharselect unicode block name"
 #| msgid "Supplemental Symbols and Pictographs"
@@ -1079,7 +1084,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
 msgstr "補助記号および絵文字"
 
-#: kcharselect-translation.cpp:204
+#: kcharselect-translation.cpp:205
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
@@ -1172,7 +1177,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "表示するブロックを選択"
 
-#: kcharselect.cpp:484
+#: kcharselect.cpp:486
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font"
@@ -1180,7 +1185,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "フォントを設定"
 
-#: kcharselect.cpp:491
+#: kcharselect.cpp:493
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font size"
@@ -1188,328 +1193,333 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "フォントサイズを設定"
 
-#: kcharselect.cpp:790
+#: kcharselect.cpp:795
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "文字:"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:801
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "名前: "
 
-#: kcharselect.cpp:805
+#: kcharselect.cpp:810
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "注釈と相互参照"
 
-#: kcharselect.cpp:809
+#: kcharselect.cpp:814
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "別名:"
 
-#: kcharselect.cpp:817
+#: kcharselect.cpp:822
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "備考:"
 
-#: kcharselect.cpp:825
+#: kcharselect.cpp:830
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "関連項目:"
 
-#: kcharselect.cpp:840
+#: kcharselect.cpp:845
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "等価:"
 
-#: kcharselect.cpp:848
+#: kcharselect.cpp:853
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "ほぼ等価:"
 
-#: kcharselect.cpp:856
+#: kcharselect.cpp:861
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr ""
 
-#: kcharselect.cpp:868
+#: kcharselect.cpp:873
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK 表意文字の情報"
 
-#: kcharselect.cpp:871
+#: kcharselect.cpp:876
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "英語による定義: "
 
-#: kcharselect.cpp:878
+#: kcharselect.cpp:883
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "中国語 (普通話) の発音:"
 
-#: kcharselect.cpp:885
+#: kcharselect.cpp:890
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "広東語の発音:"
 
-#: kcharselect.cpp:892
+#: kcharselect.cpp:897
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "日本語の音読み: "
 
-#: kcharselect.cpp:899
+#: kcharselect.cpp:904
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "日本語の訓読み: "
 
-#: kcharselect.cpp:906
+#: kcharselect.cpp:911
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "唐音の発音:"
 
-#: kcharselect.cpp:913
+#: kcharselect.cpp:918
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "韓国語・朝鮮語の発音:"
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:924
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "文字の一般的なプロパティ"
 
-#: kcharselect.cpp:920
+#: kcharselect.cpp:925
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "ブロック: "
 
-#: kcharselect.cpp:921
+#: kcharselect.cpp:926
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Unicode カテゴリ: "
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "よく使われる表現"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:931
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:930
+#: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:937
+#: kcharselect.cpp:942
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C 言語の八進コード (UTF-8): "
 
 # skip-rule: entity
-#: kcharselect.cpp:941
+#: kcharselect.cpp:946
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML の文字参照 (十進コード):"
 
-#: kcharselect.cpp:1085
+#: kcharselect.cpp:1098
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Unicode コードポイント:"
 
-#: kcharselect.cpp:1085
+#: kcharselect.cpp:1098
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "十進コード"
 
-#: kcharselectdata.cpp:309
+#: kcharselectdata.cpp:311
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "文字"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:332
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<私用ではない上位サロゲート>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:334
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<私用の上位サロゲート>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:336
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<下位サロゲート>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:338
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<私用>"
 
-#: kcharselectdata.cpp:368
+#: kcharselectdata.cpp:370
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<未定義>"
 
-#: kcharselectdata.cpp:753
+#: kcharselectdata.cpp:448
+msgctxt "KCharSelectData|KCharselect unicode section name"
+msgid "All"
+msgstr ""
+
+#: kcharselectdata.cpp:760
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "制御文字"
 
-#: kcharselectdata.cpp:786
+#: kcharselectdata.cpp:793
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "その他、制御機能用記号"
 
-#: kcharselectdata.cpp:788
+#: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "その他、フォーマット文字"
 
-#: kcharselectdata.cpp:790
+#: kcharselectdata.cpp:797
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "その他、未定義"
 
-#: kcharselectdata.cpp:792
+#: kcharselectdata.cpp:799
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "その他、私用"
 
-#: kcharselectdata.cpp:794
+#: kcharselectdata.cpp:801
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "その他、サロゲート"
 
-#: kcharselectdata.cpp:796
+#: kcharselectdata.cpp:803
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "文字、小文字"
 
-#: kcharselectdata.cpp:798
+#: kcharselectdata.cpp:805
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "文字、修飾文字"
 
-#: kcharselectdata.cpp:800
+#: kcharselectdata.cpp:807
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "文字、その他"
 
-#: kcharselectdata.cpp:802
+#: kcharselectdata.cpp:809
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "文字、タイトル文字"
 
-#: kcharselectdata.cpp:804
+#: kcharselectdata.cpp:811
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "文字、大文字"
 
-#: kcharselectdata.cpp:806
+#: kcharselectdata.cpp:813
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "符号、前進を伴う合成"
 
-#: kcharselectdata.cpp:808
+#: kcharselectdata.cpp:815
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "符号、囲み"
 
-#: kcharselectdata.cpp:810
+#: kcharselectdata.cpp:817
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "符号、前進を伴わない"
 
-#: kcharselectdata.cpp:812
+#: kcharselectdata.cpp:819
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "数、十進数字"
 
-#: kcharselectdata.cpp:814
+#: kcharselectdata.cpp:821
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "数、文字"
 
-#: kcharselectdata.cpp:816
+#: kcharselectdata.cpp:823
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "数、その他"
 
-#: kcharselectdata.cpp:818
+#: kcharselectdata.cpp:825
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "句読点、コネクタ"
 
-#: kcharselectdata.cpp:820
+#: kcharselectdata.cpp:827
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "句読点、ダッシュ"
 
-#: kcharselectdata.cpp:822
+#: kcharselectdata.cpp:829
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "句読点、閉じる"
 
-#: kcharselectdata.cpp:824
+#: kcharselectdata.cpp:831
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "句読点、終了引用符"
 
-#: kcharselectdata.cpp:826
+#: kcharselectdata.cpp:833
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "句読点、開始引用符"
 
-#: kcharselectdata.cpp:828
+#: kcharselectdata.cpp:835
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "句読点、その他"
 
-#: kcharselectdata.cpp:830
+#: kcharselectdata.cpp:837
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "句読点、開く"
 
-#: kcharselectdata.cpp:832
+#: kcharselectdata.cpp:839
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "記号、通貨"
 
-#: kcharselectdata.cpp:834
+#: kcharselectdata.cpp:841
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "記号、修飾文字"
 
-#: kcharselectdata.cpp:836
+#: kcharselectdata.cpp:843
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "記号、数学"
 
-#: kcharselectdata.cpp:838
+#: kcharselectdata.cpp:845
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "記号、その他"
 
-#: kcharselectdata.cpp:840
+#: kcharselectdata.cpp:847
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "セパレータ、行"
 
-#: kcharselectdata.cpp:842
+#: kcharselectdata.cpp:849
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "セパレータ、段落"
 
-#: kcharselectdata.cpp:844
+#: kcharselectdata.cpp:851
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "セパレータ、スペース"
 
-#: kcharselectdata.cpp:846
+#: kcharselectdata.cpp:853
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "未知"
@@ -1722,7 +1732,7 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "下へ移動(&D)"
 
-#: kfontchooser.cpp:165
+#: kfontchooser.cpp:168
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid "Requested Font"
@@ -1730,7 +1740,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "使用するフォント"
 
-#: kfontchooser.cpp:206
+#: kfontchooser.cpp:209
 #, fuzzy
 #| msgctxt "KFontChooser|QFontDatabase"
 #| msgid "Normal"
@@ -1738,32 +1748,32 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "普通"
 
-#: kfontchooser.cpp:207 kfontchooser.cpp:486
+#: kfontchooser.cpp:210 kfontchooser.cpp:489
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "イタリック"
 
-#: kfontchooser.cpp:208 kfontchooser.cpp:487
+#: kfontchooser.cpp:211 kfontchooser.cpp:490
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "オブリック"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ボールド"
 
-#: kfontchooser.cpp:210
+#: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:254
+#: kfontchooser.cpp:257
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "漢字 ひらがな カタカナ Alphabet 123"
 
-#: kfontchooser.cpp:310
+#: kfontchooser.cpp:313
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -1771,7 +1781,7 @@ msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgstr "フォントサイズ<br />環境に対して「固定」か「相対的」か"
 
-#: kfontchooser.cpp:311
+#: kfontchooser.cpp:314
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -1787,7 +1797,7 @@ msgstr ""
 "固定フォントサイズと、環境の変化 (ウィジェットの大きさ、紙のサイズなど) に応"
 "じて動的に計算・調整されるフォントサイズを切り替えることができます。"
 
-#: kfontchooser.cpp:471
+#: kfontchooser.cpp:474
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1862,7 +1872,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相対的"
 
-#: kfontchooserwidget.ui:116
+#: kfontchooserwidget.ui:123
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -1876,7 +1886,7 @@ msgstr ""
 "このサンプルテキストは現在の設定を示しています。テキストを編集して他の文字で"
 "テストすることもできます。"
 
-#: kfontchooserwidget.ui:128
+#: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
@@ -1989,7 +1999,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "次回からこのメッセージを表示しない"
 
-#: kmessagedialog.cpp:132
+#: kmessagedialog.cpp:133
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -1997,7 +2007,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細"
 
-#: kmessagedialog.cpp:197
+#: kmessagedialog.cpp:198
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2005,7 +2015,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "質問"
 
-#: kmessagedialog.cpp:202
+#: kmessagedialog.cpp:203
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2013,7 +2023,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:205
+#: kmessagedialog.cpp:206
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2021,7 +2031,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "情報"
 
-#: kmessagedialog.cpp:208
+#: kmessagedialog.cpp:209
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Sorry"
@@ -2029,7 +2039,7 @@ msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "すみません"
 
-#: kmessagedialog.cpp:211
+#: kmessagedialog.cpp:212
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"
@@ -2345,7 +2355,7 @@ msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr ""
 
-#: ksqueezedtextlabel.cpp:202
+#: ksqueezedtextlabel.cpp:205
 #, fuzzy
 #| msgctxt "KSqueezedTextLabel|"
 #| msgid "&Copy Full Text"

@@ -2,11 +2,12 @@ Source: kwidgetsaddons
 Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Norbert Preining <norbert@preining.info>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.86.0~),
+               extra-cmake-modules (>= 5.90.0~),
                libqt5sql5-sqlite:native,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
@@ -21,9 +22,7 @@ Rules-Requires-Root: no
 Package: libkf5widgetsaddons-data
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: libkf5widgetsaddons5-data
-Replaces: libkf5widgetsaddons5-data
+Depends: ${misc:Depends}
 Description: add-on widgets and classes for applications that use the Qt Widgets module
  Provided are action classes that can be added to toolbars or menus,
  a wide range of widgets for selecting characters, fonts, colors,

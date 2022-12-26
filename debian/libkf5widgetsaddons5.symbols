@@ -1,6 +1,7 @@
-# SymbolsHelper-Confirmed: 5.78.0 alpha amd64 arm64 armel armhf hppa hurd-i386 i386 ia64 m68k mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
+# SymbolsHelper-Confirmed: 5.88.0 amd64 arm64 armel armhf hppa hurd-i386 i386 ia64 m68k mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
 libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
 * Build-Depends-Package: libkf5widgetsaddons-dev
+ (c++)"KSeparator::~KSeparator()@Base" 5.80.0
  _ZN10KPageModel11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
  _ZN10KPageModel11qt_metacastEPKc@Base 4.96.0
  _ZN10KPageModel16staticMetaObjectE@Base 4.96.0
@@ -334,13 +335,20 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN12KFontChooser12enableColumnEib@Base 4.96.0
  _ZN12KFontChooser12fontSelectedERK5QFont@Base 4.96.0
  _ZN12KFontChooser13setSampleTextERK7QString@Base 4.96.0
+ _ZN12KFontChooser14createFontListEj@Base 5.88.0
+ _ZN12KFontChooser16setFontListItemsERK11QStringList@Base 5.88.0
  _ZN12KFontChooser16staticMetaObjectE@Base 4.96.0
  _ZN12KFontChooser17setSizeIsRelativeEN2Qt10CheckStateE@Base 4.96.0
  _ZN12KFontChooser18setBackgroundColorERK6QColor@Base 4.96.0
+ _ZN12KFontChooser18setMinVisibleItemsEi@Base 5.88.0
  _ZN12KFontChooser19setSampleBoxVisibleEb@Base 4.96.0
  _ZN12KFontChooser7setFontERK5QFontb@Base 4.96.0
  _ZN12KFontChooser8setColorERK6QColor@Base 4.96.0
+ _ZN12KFontChooserC1E6QFlagsINS_11DisplayFlagEEP7QWidget@Base 5.88.0
+ _ZN12KFontChooserC1EP7QWidget@Base 5.88.0
  _ZN12KFontChooserC1EP7QWidgetRK6QFlagsINS_11DisplayFlagEERK11QStringListiPN2Qt10CheckStateE@Base 4.96.0
+ _ZN12KFontChooserC2E6QFlagsINS_11DisplayFlagEEP7QWidget@Base 5.88.0
+ _ZN12KFontChooserC2EP7QWidget@Base 5.88.0
  _ZN12KFontChooserC2EP7QWidgetRK6QFlagsINS_11DisplayFlagEERK11QStringListiPN2Qt10CheckStateE@Base 4.96.0
  _ZN12KFontChooserD0Ev@Base 4.96.0
  _ZN12KFontChooserD1Ev@Base 4.96.0
@@ -589,6 +597,17 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN13KToggleActionD0Ev@Base 4.96.0
  _ZN13KToggleActionD1Ev@Base 4.96.0
  _ZN13KToggleActionD2Ev@Base 4.96.0
+ _ZN13KTwoFingerTap11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.88.0
+ _ZN13KTwoFingerTap11qt_metacastEPKc@Base 5.88.0
+ _ZN13KTwoFingerTap11setScenePosE7QPointF@Base 5.88.0
+ _ZN13KTwoFingerTap12setScreenPosE7QPointF@Base 5.88.0
+ _ZN13KTwoFingerTap16staticMetaObjectE@Base 5.88.0
+ _ZN13KTwoFingerTap6setPosE7QPointF@Base 5.88.0
+ _ZN13KTwoFingerTapC1EP7QObject@Base 5.88.0
+ _ZN13KTwoFingerTapC2EP7QObject@Base 5.88.0
+ _ZN13KTwoFingerTapD0Ev@Base 5.88.0
+ _ZN13KTwoFingerTapD1Ev@Base 5.88.0
+ _ZN13KTwoFingerTapD2Ev@Base 5.88.0
  _ZN14KColumnResizer11eventFilterEP7QObjectP6QEvent@Base 5.2.0
  _ZN14KColumnResizer11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.2.0
  _ZN14KColumnResizer11qt_metacastEPKc@Base 5.2.0
@@ -833,6 +852,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN15KPasswordDialog19setUsernameReadOnlyEb@Base 4.96.0
  _ZN15KPasswordDialog22gotUsernameAndPasswordERK7QStringS2_b@Base 4.96.0
  _ZN15KPasswordDialog22setUsernameContextHelpERK7QString@Base 5.77.0
+ _ZN15KPasswordDialog26setRevealPasswordAvailableEb@Base 5.88.0
  _ZN15KPasswordDialog6acceptEv@Base 4.96.0
  _ZN15KPasswordDialog7setIconERK5QIcon@Base 5.69.0
  _ZN15KPasswordDialog9setDomainERK7QString@Base 4.96.0
@@ -854,6 +874,18 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN15KPixmapSequenceD1Ev@Base 4.96.0
  _ZN15KPixmapSequenceD2Ev@Base 4.96.0
  _ZN15KPixmapSequenceaSERKS_@Base 4.96.0
+ _ZN15KTwoFingerSwipe11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.88.0
+ _ZN15KTwoFingerSwipe11qt_metacastEPKc@Base 5.88.0
+ _ZN15KTwoFingerSwipe11setScenePosE7QPointF@Base 5.88.0
+ _ZN15KTwoFingerSwipe12setScreenPosE7QPointF@Base 5.88.0
+ _ZN15KTwoFingerSwipe13setSwipeAngleEd@Base 5.88.0
+ _ZN15KTwoFingerSwipe16staticMetaObjectE@Base 5.88.0
+ _ZN15KTwoFingerSwipe6setPosE7QPointF@Base 5.88.0
+ _ZN15KTwoFingerSwipeC1EP7QObject@Base 5.88.0
+ _ZN15KTwoFingerSwipeC2EP7QObject@Base 5.88.0
+ _ZN15KTwoFingerSwipeD0Ev@Base 5.88.0
+ _ZN15KTwoFingerSwipeD1Ev@Base 5.88.0
+ _ZN15KTwoFingerSwipeD2Ev@Base 5.88.0
  _ZN16KAssistantDialog11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
  _ZN16KAssistantDialog11qt_metacastEPKc@Base 4.96.0
  _ZN16KAssistantDialog14setAppropriateEP15KPageWidgetItemb@Base 4.96.0
@@ -1200,6 +1232,14 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN23KToggleFullScreenActionD0Ev@Base 4.96.0
  _ZN23KToggleFullScreenActionD1Ev@Base 4.96.0
  _ZN23KToggleFullScreenActionD2Ev@Base 4.96.0
+ _ZN23KTwoFingerTapRecognizer12setTapRadiusEi@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizer6createEP7QObject@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizer9recognizeEP8QGestureP7QObjectP6QEvent@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizerC1Ev@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizerC2Ev@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizerD0Ev@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizerD1Ev@Base 5.88.0
+ _ZN23KTwoFingerTapRecognizerD2Ev@Base 5.88.0
  _ZN24KDragWidgetDecoratorBase10dragObjectEv@Base 4.96.0
  _ZN24KDragWidgetDecoratorBase11eventFilterEP7QObjectP6QEvent@Base 4.96.0
  _ZN24KDragWidgetDecoratorBase11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
@@ -1239,6 +1279,15 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN24KViewStateMaintainerBaseD0Ev@Base 4.96.0
  _ZN24KViewStateMaintainerBaseD1Ev@Base 4.96.0
  _ZN24KViewStateMaintainerBaseD2Ev@Base 4.96.0
+ _ZN25KTwoFingerSwipeRecognizer15setMaxSwipeTimeEi@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizer16setSwipeDistanceEi@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizer6createEP7QObject@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizer9recognizeEP8QGestureP7QObjectP6QEvent@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizerC1Ev@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizerC2Ev@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizerD0Ev@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizerD1Ev@Base 5.88.0
+ _ZN25KTwoFingerSwipeRecognizerD2Ev@Base 5.88.0
  _ZN26LineEditUrlDropEventFilter11eventFilterEP7QObjectP6QEvent@Base 4.96.0
  _ZN26LineEditUrlDropEventFilter11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
  _ZN26LineEditUrlDropEventFilter11qt_metacastEPKc@Base 4.96.0
@@ -1615,6 +1664,10 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK13KTimeComboBox7optionsEv@Base 4.96.0
  _ZNK13KTimeComboBox8timeListEv@Base 4.96.0
  _ZNK13KToggleAction10metaObjectEv@Base 4.96.0
+ _ZNK13KTwoFingerTap10metaObjectEv@Base 5.88.0
+ _ZNK13KTwoFingerTap3posEv@Base 5.88.0
+ _ZNK13KTwoFingerTap8scenePosEv@Base 5.88.0
+ _ZNK13KTwoFingerTap9screenPosEv@Base 5.88.0
  _ZNK14KColumnResizer10metaObjectEv@Base 5.2.0
  _ZNK14KFontRequester10metaObjectEv@Base 4.96.0
  _ZNK14KFontRequester10sampleTextEv@Base 4.96.0
@@ -1698,6 +1751,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK15KPasswordDialog10metaObjectEv@Base 4.96.0
  _ZNK15KPasswordDialog12keepPasswordEv@Base 4.96.0
  _ZNK15KPasswordDialog13anonymousModeEv@Base 4.96.0
+ _ZNK15KPasswordDialog25isRevealPasswordAvailableEv@Base 5.88.0
  _ZNK15KPasswordDialog4iconEv@Base 5.69.0
  _ZNK15KPasswordDialog6domainEv@Base 4.96.0
  _ZNK15KPasswordDialog6pixmapEv@Base 4.96.0
@@ -1710,6 +1764,11 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK15KPixmapSequence7isEmptyEv@Base 4.96.0
  _ZNK15KPixmapSequence7isValidEv@Base 4.96.0
  _ZNK15KPixmapSequence9frameSizeEv@Base 4.96.0
+ _ZNK15KTwoFingerSwipe10metaObjectEv@Base 5.88.0
+ _ZNK15KTwoFingerSwipe10swipeAngleEv@Base 5.88.0
+ _ZNK15KTwoFingerSwipe3posEv@Base 5.88.0
+ _ZNK15KTwoFingerSwipe8scenePosEv@Base 5.88.0
+ _ZNK15KTwoFingerSwipe9screenPosEv@Base 5.88.0
  _ZNK16KAssistantDialog10backButtonEv@Base 4.98.0
  _ZNK16KAssistantDialog10metaObjectEv@Base 4.96.0
  _ZNK16KAssistantDialog10nextButtonEv@Base 4.98.0
@@ -1808,6 +1867,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK22KMimeTypeChooserDialog10metaObjectEv@Base 5.52.0
  _ZNK22KMimeTypeChooserDialog8sizeHintEv@Base 5.70.0
  _ZNK23KToggleFullScreenAction10metaObjectEv@Base 4.96.0
+ _ZNK23KTwoFingerTapRecognizer9tapRadiusEv@Base 5.88.0
  _ZNK24KDragWidgetDecoratorBase10metaObjectEv@Base 4.96.0
  _ZNK24KDragWidgetDecoratorBase13isDragEnabledEv@Base 4.96.0
  _ZNK24KDragWidgetDecoratorBase15decoratedWidgetEv@Base 4.96.0
@@ -1817,6 +1877,8 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK24KViewStateMaintainerBase10metaObjectEv@Base 4.96.0
  _ZNK24KViewStateMaintainerBase14selectionModelEv@Base 4.96.0
  _ZNK24KViewStateMaintainerBase4viewEv@Base 4.96.0
+ _ZNK25KTwoFingerSwipeRecognizer12maxSwipeTimeEv@Base 5.88.0
+ _ZNK25KTwoFingerSwipeRecognizer17minSswipeDistanceEv@Base 5.88.0
  _ZNK26LineEditUrlDropEventFilter10metaObjectEv@Base 4.96.0
  _ZNK27KPixmapRegionSelectorDialog10metaObjectEv@Base 4.96.0
  _ZNK27KPixmapRegionSelectorDialog26pixmapRegionSelectorWidgetEv@Base 4.96.0
@@ -1888,6 +1950,13 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK9KUrlLabel7tipTextEv@Base 4.96.0
  _ZNK9KUrlLabel7useTipsEv@Base 4.96.0
  _ZNK9KUrlLabel9useCursorEv@Base 4.96.0
+ (optional=templinst)_ZNSt6vectorIP13QStandardItemSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_@Base 5.88.0
+ (optional=templinst|arch=!hurd-i386 !i386 !mipsel !powerpc !ppc64 !s390x)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_EPFbRS2_S6_ESaIS3_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS3_E@Base 5.88.0
+ (optional=templinst)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_EPFbRS2_S6_ESaIS3_EE24_M_get_insert_unique_posES6_@Base 5.88.0
+ (optional=templinst)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_EPFbRS2_S6_ESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ES6_@Base 5.88.0
+ (optional=templinst)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE16_M_insert_uniqueIS3_EES1_ISt17_Rb_tree_iteratorIS3_EbEOT_@Base 5.88.0
+ (optional=templinst)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE24_M_get_insert_unique_posERS2_@Base 5.88.0
+ (optional=templinst)_ZNSt8_Rb_treeI7QStringSt4pairIKS0_S0_ESt10_Select1stIS3_ESt4lessIS0_ESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS2_@Base 5.88.0
  _ZTI10KPageModel@Base 4.96.0
  _ZTI10KSeparator@Base 4.96.0
  _ZTI11KActionMenu@Base 4.96.0
@@ -1911,6 +1980,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTI13KSelectAction@Base 4.96.0
  _ZTI13KTimeComboBox@Base 4.96.0
  _ZTI13KToggleAction@Base 4.96.0
+ _ZTI13KTwoFingerTap@Base 5.88.0
  _ZTI14KColumnResizer@Base 5.2.0
  _ZTI14KFontRequester@Base 4.96.0
  _ZTI14KMessageDialog@Base 5.77.0
@@ -1923,6 +1993,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTI15KMultiTabBarTab@Base 4.96.0
  _ZTI15KPageWidgetItem@Base 4.96.0
  _ZTI15KPasswordDialog@Base 4.96.0
+ _ZTI15KTwoFingerSwipe@Base 5.88.0
  _ZTI16KAssistantDialog@Base 4.96.0
  _ZTI16KMimeTypeChooser@Base 4.96.0
  _ZTI16KPageWidgetModel@Base 4.96.0
@@ -1943,9 +2014,11 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTI21KPixmapSequenceWidget@Base 4.96.0
  _ZTI22KMimeTypeChooserDialog@Base 4.96.0
  _ZTI23KToggleFullScreenAction@Base 4.96.0
+ _ZTI23KTwoFingerTapRecognizer@Base 5.88.0
  _ZTI24KDragWidgetDecoratorBase@Base 4.96.0
  _ZTI24KSplitterCollapserButton@Base 5.4.0+git20141119.0013+15.04
  _ZTI24KViewStateMaintainerBase@Base 4.96.0
+ _ZTI25KTwoFingerSwipeRecognizer@Base 5.88.0
  _ZTI26LineEditUrlDropEventFilter@Base 4.96.0
  _ZTI27KPixmapRegionSelectorDialog@Base 4.96.0
  _ZTI27KPixmapRegionSelectorWidget@Base 4.96.0
@@ -1979,6 +2052,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTS13KSelectAction@Base 4.96.0
  _ZTS13KTimeComboBox@Base 4.96.0
  _ZTS13KToggleAction@Base 4.96.0
+ _ZTS13KTwoFingerTap@Base 5.88.0
  _ZTS14KColumnResizer@Base 5.2.0
  _ZTS14KFontRequester@Base 4.96.0
  _ZTS14KMessageDialog@Base 5.77.0
@@ -1991,6 +2065,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTS15KMultiTabBarTab@Base 4.96.0
  _ZTS15KPageWidgetItem@Base 4.96.0
  _ZTS15KPasswordDialog@Base 4.96.0
+ _ZTS15KTwoFingerSwipe@Base 5.88.0
  _ZTS16KAssistantDialog@Base 4.96.0
  _ZTS16KMimeTypeChooser@Base 4.96.0
  _ZTS16KPageWidgetModel@Base 4.96.0
@@ -2011,9 +2086,11 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTS21KPixmapSequenceWidget@Base 4.96.0
  _ZTS22KMimeTypeChooserDialog@Base 4.96.0
  _ZTS23KToggleFullScreenAction@Base 4.96.0
+ _ZTS23KTwoFingerTapRecognizer@Base 5.88.0
  _ZTS24KDragWidgetDecoratorBase@Base 4.96.0
  _ZTS24KSplitterCollapserButton@Base 5.4.0+git20141119.0013+15.04
  _ZTS24KViewStateMaintainerBase@Base 4.96.0
+ _ZTS25KTwoFingerSwipeRecognizer@Base 5.88.0
  _ZTS26LineEditUrlDropEventFilter@Base 4.96.0
  _ZTS27KPixmapRegionSelectorDialog@Base 4.96.0
  _ZTS27KPixmapRegionSelectorWidget@Base 4.96.0
@@ -2047,6 +2124,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTV13KSelectAction@Base 4.96.0
  _ZTV13KTimeComboBox@Base 4.96.0
  _ZTV13KToggleAction@Base 4.96.0
+ _ZTV13KTwoFingerTap@Base 5.88.0
  _ZTV14KColumnResizer@Base 5.2.0
  _ZTV14KFontRequester@Base 4.96.0
  _ZTV14KMessageDialog@Base 5.77.0
@@ -2059,6 +2137,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTV15KMultiTabBarTab@Base 4.96.0
  _ZTV15KPageWidgetItem@Base 4.96.0
  _ZTV15KPasswordDialog@Base 4.96.0
+ _ZTV15KTwoFingerSwipe@Base 5.88.0
  _ZTV16KAssistantDialog@Base 4.96.0
  _ZTV16KMimeTypeChooser@Base 4.96.0
  _ZTV16KPageWidgetModel@Base 4.96.0
@@ -2079,9 +2158,11 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTV21KPixmapSequenceWidget@Base 4.96.0
  _ZTV22KMimeTypeChooserDialog@Base 4.96.0
  _ZTV23KToggleFullScreenAction@Base 4.96.0
+ _ZTV23KTwoFingerTapRecognizer@Base 5.88.0
  _ZTV24KDragWidgetDecoratorBase@Base 4.96.0
  _ZTV24KSplitterCollapserButton@Base 5.4.0+git20141119.0013+15.04
  _ZTV24KViewStateMaintainerBase@Base 4.96.0
+ _ZTV25KTwoFingerSwipeRecognizer@Base 5.88.0
  _ZTV26LineEditUrlDropEventFilter@Base 4.96.0
  _ZTV27KPixmapRegionSelectorDialog@Base 4.96.0
  _ZTV27KPixmapRegionSelectorWidget@Base 4.96.0
@@ -2092,8 +2173,6 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTV9KSelector@Base 4.96.0
  _ZTV9KUrlLabel@Base 4.96.0
  _ZTVN15KEditListWidget12CustomEditorE@Base 4.96.0
- (c++)"KSeparator::~KSeparator()@Base" 5.80.0
- (c++)"non-virtual thunk to KSeparator::~KSeparator()@Base" 5.80.0
  (c++)"non-virtual thunk to KActionSelector::~KActionSelector()@Base" 4.96.0
  (c++)"non-virtual thunk to KAnimatedButton::~KAnimatedButton()@Base" 4.96.0
  (c++)"non-virtual thunk to KAssistantDialog::~KAssistantDialog()@Base" 4.96.0
@@ -2134,6 +2213,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  (c++)"non-virtual thunk to KRecentFilesMenu::~KRecentFilesMenu()@Base" 5.74.0
  (c++)"non-virtual thunk to KRuler::~KRuler()@Base" 4.96.0
  (c++)"non-virtual thunk to KSelector::~KSelector()@Base" 4.96.0
+ (c++)"non-virtual thunk to KSeparator::~KSeparator()@Base" 5.80.0
  (c++)"non-virtual thunk to KSplitterCollapserButton::~KSplitterCollapserButton()@Base" 5.4.0+git20141119.0013+15.04
  (c++)"non-virtual thunk to KSqueezedTextLabel::~KSqueezedTextLabel()@Base" 4.96.0
  (c++)"non-virtual thunk to KTimeComboBox::~KTimeComboBox()@Base" 4.96.0

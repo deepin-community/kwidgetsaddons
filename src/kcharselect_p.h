@@ -40,7 +40,7 @@ public:
      */
     KCharSelectTable(QWidget *parent, const QFont &_font);
 
-    ~KCharSelectTable();
+    ~KCharSelectTable() override;
 
     void resizeEvent(QResizeEvent *) override;
 
@@ -84,7 +84,7 @@ Q_SIGNALS:
 
 private:
     friend class KCharSelectTablePrivate;
-    std::unique_ptr<class KCharSelectTablePrivate> const d;
+    std::unique_ptr<KCharSelectTablePrivate> const d;
 
     Q_DISABLE_COPY(KCharSelectTable)
 };

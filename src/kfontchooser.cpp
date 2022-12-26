@@ -33,19 +33,22 @@
 
 static int minimumListWidth(const QListWidget *list)
 {
-    int w = 0;
-    for (int i = 0; i < list->count(); i++) {
-        int itemWidth = list->visualItemRect(list->item(i)).width();
-        // ...and add a space on both sides for not too tight look.
-        itemWidth += list->fontMetrics().horizontalAdvance(QLatin1Char(' ')) * 2;
-        w = qMax(w, itemWidth);
+    QFontMetrics fm = list->fontMetrics();
+
+    const int extraSpace = fm.horizontalAdvance(QLatin1Char(' ')) * 2;
+
+    // Minimum initial size
+    int width = 40;
+    for (int i = 0, rows = list->count(); i < rows; ++i) {
+        int itemWidth = fm.horizontalAdvance(list->item(i)->text());
+        // ...and add a space on both sides for a not too tight look.
+        itemWidth += extraSpace;
+        width = std::max(width, itemWidth);
     }
-    if (w == 0) {
-        w = 40;
-    }
-    w += list->frameWidth() * 2;
-    w += list->verticalScrollBar()->sizeHint().width();
-    return w;
+
+    width += list->frameWidth() * 2;
+    width += list->verticalScrollBar()->sizeHint().width();
+    return width;
 }
 
 static int minimumListHeight(const QListWidget *list, int numVisibleEntry)
@@ -750,7 +753,7 @@ void KFontChooserPrivate::setupDisplay()
     if (i == numEntries) {
         const int bracketPos = family.indexOf(QLatin1Char('['));
         if (bracketPos != -1) {
-            family = family.leftRef(bracketPos).trimmed().toString();
+            family = QStringView(family).left(bracketPos).trimmed().toString();
             for (i = 0; i < numEntries; ++i) {
                 if (family == m_qtFamilies[m_ui->familyListWidget->item(i)->text()].toLower()) {
                     m_ui->familyListWidget->setCurrentRow(i);

@@ -52,6 +52,7 @@ public:
     KCollapsibleGroupBox *m_detailsGroup = nullptr;
     QCheckBox *m_dontAskAgainCB = nullptr;
     QDialogButtonBox *m_buttonBox = nullptr;
+    QMetaObject::Connection m_buttonBoxConnection;
 };
 
 KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent)
@@ -367,12 +368,14 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
     }
 
     // Button connections
-    connect(d->m_buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton *button) {
-        QDialogButtonBox::StandardButton code = d->m_buttonBox->standardButton(button);
-        if (code != QDialogButtonBox::NoButton) {
-            done(code);
-        }
-    });
+    if (!d->m_buttonBoxConnection) {
+        d->m_buttonBoxConnection = connect(d->m_buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton *button) {
+            QDialogButtonBox::StandardButton code = d->m_buttonBox->standardButton(button);
+            if (code != QDialogButtonBox::NoButton) {
+                done(code);
+            }
+        });
+    }
 }
 
 void KMessageDialog::setDontAskAgainText(const QString &dontAskAgainText)
