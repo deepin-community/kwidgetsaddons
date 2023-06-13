@@ -3,12 +3,16 @@
     SPDX-FileCopyrightText: 1997 Tim D. Gilman <tdgilman@best.org>
     SPDX-FileCopyrightText: 1998-2001 Mirko Boehm (mirko@kde.org)
     SPDX-FileCopyrightText: 2007 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: 2022 g10 Code GmbH
+    SPDX-FileContributor: Ingo Klöcker <dev@ingo-kloecker.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "kdatepicker.h"
 #include "kdatepicker_p.h"
+
+#include "common_helpers_p.h"
 #include "kdatetable_p.h"
 #include <kpopupframe.h>
 
@@ -22,6 +26,7 @@
 #include <QStyle>
 #include <QToolButton>
 
+#include "loggingcategory.h"
 #include "moc_kdatepicker.cpp"
 #include "moc_kdatepicker_p.cpp"
 
@@ -29,7 +34,7 @@ class DatePickerValidator : public QValidator
 {
     Q_OBJECT
 public:
-    DatePickerValidator(KDatePicker *parent)
+    explicit DatePickerValidator(KDatePicker *parent)
         : QValidator(parent)
         , picker(parent)
     {
@@ -42,15 +47,24 @@ public:
 
     QDate toDate(const QString &text) const
     {
-        QLocale::FormatType formats[] = {QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat};
         QLocale locale = picker->locale();
+        const QList<QString> formats{
+            locale.dateFormat(QLocale::LongFormat),
+            locale.dateFormat(QLocale::ShortFormat),
+            locale.dateFormat(QLocale::NarrowFormat),
+            dateFormatWith4DigitYear(locale, QLocale::ShortFormat),
+            QStringLiteral("yyyy-MM-dd"),
+        };
 
         QDate date;
-        for (int i = 0; i < 3; i++) {
-            date = locale.toDate(text, formats[i]);
+        for (const auto &format : formats) {
+            date = locale.toDate(text, format);
             if (date.isValid()) {
                 break;
             }
+        }
+        if (!date.isValid()) {
+            qCDebug(KWidgetsAddonsLog) << "Could not parse text as date:" << text;
         }
         return date;
     }
@@ -66,9 +80,8 @@ KDatePickerPrivateYearSelector::KDatePickerPrivateYearSelector(const QDate &curr
     : QLineEdit(parent)
     , val(new QIntValidator(this))
     , result(0)
+    , oldDate{currentDate}
 {
-    oldDate = currentDate;
-
     setFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
 
     setFrame(false);
@@ -117,12 +130,8 @@ class KDatePickerPrivate
     Q_DECLARE_TR_FUNCTIONS(KDatePicker)
 
 public:
-    KDatePickerPrivate(KDatePicker *qq)
+    explicit KDatePickerPrivate(KDatePicker *qq)
         : q(qq)
-        , closeButton(nullptr)
-        , selectWeek(nullptr)
-        , todayButton(nullptr)
-        , navigationLayout(nullptr)
     {
     }
 
@@ -132,34 +141,34 @@ public:
     /// the date table
     KDatePicker *q;
 
-    QToolButton *closeButton;
-    QComboBox *selectWeek;
-    QToolButton *todayButton;
-    QBoxLayout *navigationLayout;
+    QToolButton *closeButton = nullptr;
+    QComboBox *selectWeek = nullptr;
+    QToolButton *todayButton = nullptr;
+    QBoxLayout *navigationLayout = nullptr;
 
     /// the year forward button
-    QToolButton *yearForward;
+    QToolButton *yearForward = nullptr;
     /// the year backward button
-    QToolButton *yearBackward;
+    QToolButton *yearBackward = nullptr;
     /// the month forward button
-    QToolButton *monthForward;
+    QToolButton *monthForward = nullptr;
     /// the month backward button
-    QToolButton *monthBackward;
+    QToolButton *monthBackward = nullptr;
     /// the button for selecting the month directly
-    QToolButton *selectMonth;
+    QToolButton *selectMonth = nullptr;
     /// the button for selecting the year directly
-    QToolButton *selectYear;
+    QToolButton *selectYear = nullptr;
     /// the line edit to enter the date directly
-    QLineEdit *line;
+    QLineEdit *line = nullptr;
     /// the validator for the line edit:
-    DatePickerValidator *val;
+    DatePickerValidator *val = nullptr;
     /// the date table
-    KDateTable *table;
+    KDateTable *table = nullptr;
     /// the widest month string in pixels:
     QSize maxMonthRect;
 
     /// the font size for the widget
-    int fontsize;
+    int fontsize = -1;
 };
 
 void KDatePickerPrivate::fillWeeksCombo()
@@ -371,7 +380,7 @@ void KDatePicker::resizeEvent(QResizeEvent *e)
 
 void KDatePicker::dateChangedSlot(const QDate &date_)
 {
-    d->line->setText(locale().toString(date_, QLocale::ShortFormat));
+    d->line->setText(locale().toString(date_, dateFormatWith4DigitYear(locale(), QLocale::ShortFormat)));
     d->selectMonth->setText(locale().standaloneMonthName(date_.month(), QLocale::LongFormat));
     d->fillWeeksCombo();
 

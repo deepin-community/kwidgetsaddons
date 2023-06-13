@@ -45,6 +45,10 @@ target_sources(KF5WidgetsAddons PRIVATE
     kdatepicker.cpp
     kdatepicker.h
     kdatepicker_p.h
+    kdatepickerpopup.cpp
+    kdatepickerpopup.h
+    kdaterangecontrol.cpp
+    kdaterangecontrol_p.h
     kdatetable.cpp
     kdatetable_p.h
     kdatetimeedit.cpp
@@ -205,7 +209,7 @@ ecm_generate_export_header(KF5WidgetsAddons
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 5.0 5.13 5.63 5.65 5.72 5.77 5.78 5.85 5.86
+    DEPRECATION_VERSIONS 5.0 5.13 5.63 5.65 5.72 5.77 5.78 5.85 5.86 5.97 5.100
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
@@ -229,6 +233,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KColumnResizer
   KDateComboBox
   KDatePicker
+  KDatePickerPopup
   KDateTimeEdit
   KDragWidgetDecorator
   KDualAction
@@ -298,94 +303,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
-find_package(PythonModuleGeneration)
-
-if (PythonModuleGeneration_FOUND)
-  ecm_generate_python_binding(
-    TARGET KF5::WidgetsAddons
-    PYTHONNAMESPACE PyKF5
-    MODULENAME KWidgetsAddons
-    RULES_FILE "${CMAKE_SOURCE_DIR}/cmake/rules_PyKF5.py"
-    SIP_DEPENDS
-      QtWidgets/QtWidgetsmod.sip
-    HEADERS
-      kacceleratormanager.h
-      kanimatedbutton.h
-      kbusyindicatorwidget.h
-      kcharselect.h
-      kcollapsiblegroupbox.h
-      kcolorbutton.h
-      kcolumnresizer.h
-      kdatecombobox.h
-      kdatepicker.h
-      kdatetimeedit.h
-      kdragwidgetdecorator.h
-      kdualaction.h
-      kfontaction.h
-      kfontchooser.h
-      kfontchooserdialog.h
-      kfontsizeaction.h
-      kguiitem.h
-      kled.h
-      kmessagebox.h
-      kmessageboxdontaskagaininterface.h
-      kmultitabbar.h
-      knewpasswordwidget.h
-      kpopupframe.h
-      kselectaction.h
-      kstandardguiitem.h
-      ktimecombobox.h
-      kurllabel.h
-      kcapacitybar.h
-      kfontrequester.h
-      kpassworddialog.h
-      kruler.h
-      kselector.h
-      ktitlewidget.h
-      kxyselector.h
-      kseparator.h
-      ksqueezedtextlabel.h
-      ktoggleaction.h
-      ktogglefullscreenaction.h
-      kviewstateserializer.h
-      kviewstatemaintainerbase.h
-      keditlistwidget.h
-      kcursor.h
-      kratingpainter.h
-      kratingwidget.h
-      kactionselector.h
-      kcolorcombo.h
-      kactionmenu.h
-      ktoolbarlabelaction.h
-      ktoolbarpopupaction.h
-      ktoolbarspaceraction.h
-      kpagedialog.h
-      kpagemodel.h
-      kpageview.h
-      kpagewidget.h
-      kpagewidgetmodel.h
-      kassistantdialog.h
-      kmessagewidget.h
-      kmessagedialog.h
-      knewpassworddialog.h
-      lineediturldropeventfilter.h
-      kpasswordlineedit.h
-      kpixmapsequence.h
-      kpixmapsequenceoverlaypainter.h
-      kpixmapsequencewidget.h
-      kpixmapregionselectordialog.h
-      kpixmapregionselectorwidget.h
-      kmimetypechooser.h
-      kmimetypeeditor.h
-      kmessageboxnotifyinterface.h
-      ksplittercollapserbutton.h
-      kstyleextensions.h
-      ktwofingerswipe.h
-      ktwofingertap.h
-  )
-endif()
-
-install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${KWidgetsAddons_HEADERS}
@@ -417,6 +335,9 @@ if (BUILD_QCH)
             KWIDGETSADDONS_DEPRECATED_EXPORT
             KWIDGETSADDONS_DEPRECATED
             "KWIDGETSADDONS_DEPRECATED_VERSION(x, y, t)"
+            "KWIDGETSADDONS_DEPRECATED_VERSION_BELATED(x, y, tx, ty, t)"
+            "KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(x, y, t)"
+            "KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, tx, ty, t)"
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel

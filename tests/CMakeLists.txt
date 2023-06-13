@@ -16,8 +16,11 @@ kwidgetsaddons_executable_tests(
   kbusyindicatorwidgettest
   kcharselecttest
   kcollapsiblegroupboxtest
+  kdatecomboboxtestapp
   kdatepicktest
+  kdatepickerpopuptest
   kdatetimeedittestapp
+  kgradientselectortest
   kledtest
   kmessageboxtest
   kmessageboxwidtest

@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.88.0 amd64 arm64 armel armhf hppa hurd-i386 i386 ia64 m68k mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
+# SymbolsHelper-Confirmed: 5.100.0 armel armhf hppa hurd-i386 i386 mipsel powerpc ppc64 x32
 libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
 * Build-Depends-Package: libkf5widgetsaddons-dev
  (c++)"KSeparator::~KSeparator()@Base" 5.80.0
@@ -154,6 +154,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  (subst)_ZN11KMessageBox12errorListWIdE{quintptr}RK7QStringRK11QStringListS2_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox12warningYesNoEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox13detailedErrorEP7QWidgetRK7QStringS4_S4_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox13detailedErrorEP7QWidgetRK7QStringS4_S4_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.97.0
  _ZN11KMessageBox13detailedSorryEP7QWidgetRK7QStringS4_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox13detailedSorryEP7QWidgetRK7QStringS4_S4_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.69.0
  _ZN11KMessageBox13enableMessageERK7QString@Base 4.96.0
@@ -163,6 +164,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN11KMessageBox15informationListEP7QWidgetRK7QStringRK11QStringListS4_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox15warningYesNoWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S2_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox16detailedErrorWIdE{quintptr}RK7QStringS2_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ (subst)_ZN11KMessageBox16detailedErrorWIdE{quintptr}RK7QStringS2_S2_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.97.0
  (subst)_ZN11KMessageBox16detailedSorryWIdE{quintptr}RK7QStringS2_S2_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox16detailedSorryWIdE{quintptr}RK7QStringS2_S2_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.69.0
  (subst)_ZN11KMessageBox16questionYesNoWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S2_6QFlagsINS_6OptionEE@Base 4.96.0
@@ -171,30 +173,47 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN11KMessageBox17createKMessageBoxEP7QDialogP16QDialogButtonBoxRK5QIconRK7QStringRK11QStringListS9_Pb6QFlagsINS_6OptionEES9_N11QMessageBox4IconE@Base 4.96.0
  _ZN11KMessageBox17enableAllMessagesEv@Base 4.96.0
  _ZN11KMessageBox17questionYesNoListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_S4_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox17warningTwoActionsEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  (subst)_ZN11KMessageBox18informationListWIdE{quintptr}RK7QStringRK11QStringListS2_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox18questionTwoActionsEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  _ZN11KMessageBox18setNotifyInterfaceEP26KMessageBoxNotifyInterface@Base 4.96.0
  _ZN11KMessageBox18shouldBeShownYesNoERK7QStringRNS_10ButtonCodeE@Base 4.96.0
  _ZN11KMessageBox18warningYesNoCancelEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S7_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox19questionYesNoCancelEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S7_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox19warningYesNoListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S2_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox20questionYesNoListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ (subst)_ZN11KMessageBox20warningTwoActionsWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S2_6QFlagsINS_6OptionEE@Base 5.100.0
  _ZN11KMessageBox21KMessageBox_exec_hookE@Base 4.96.0
+ (subst)_ZN11KMessageBox21questionTwoActionsWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S2_6QFlagsINS_6OptionEE@Base 5.100.0
  _ZN11KMessageBox21shouldBeShownContinueERK7QString@Base 4.96.0
  _ZN11KMessageBox21warningContinueCancelEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S4_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox21warningTwoActionsListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  (subst)_ZN11KMessageBox21warningYesNoCancelWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S5_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox22questionTwoActionsListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  (subst)_ZN11KMessageBox22questionYesNoCancelWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S5_S2_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox22saveDontShowAgainYesNoERK7QStringNS_10ButtonCodeE@Base 4.96.0
  _ZN11KMessageBox22setDontShowAgainConfigEP7KConfig@Base 4.96.0
  _ZN11KMessageBox22warningYesNoCancelListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_SA_S4_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox23shouldBeShownTwoActionsERK7QStringRNS_10ButtonCodeE@Base 5.100.0
+ _ZN11KMessageBox23warningTwoActionsCancelEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S7_S4_6QFlagsINS_6OptionEE@Base 5.100.0
+ _ZN11KMessageBox24questionTwoActionsCancelEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S7_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  (subst)_ZN11KMessageBox24warningContinueCancelWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ (subst)_ZN11KMessageBox24warningTwoActionsListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S2_6QFlagsINS_6OptionEE@Base 5.100.0
+ (subst)_ZN11KMessageBox25questionTwoActionsListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S2_6QFlagsINS_6OptionEE@Base 5.100.0
  _ZN11KMessageBox25saveDontShowAgainContinueERK7QString@Base 4.96.0
  _ZN11KMessageBox25setDontShowAgainInterfaceEP32KMessageBoxDontAskAgainInterface@Base 4.96.0
  _ZN11KMessageBox25warningContinueCancelListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_S4_6QFlagsINS_6OptionEE@Base 4.96.0
  (subst)_ZN11KMessageBox25warningYesNoCancelListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S8_S2_6QFlagsINS_6OptionEE@Base 4.96.0
+ (subst)_ZN11KMessageBox26warningTwoActionsCancelWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S5_S2_6QFlagsINS_6OptionEE@Base 5.100.0
+ (subst)_ZN11KMessageBox27questionTwoActionsCancelWIdE{quintptr}RK7QStringS2_RK8KGuiItemS5_S5_S2_6QFlagsINS_6OptionEE@Base 5.100.0
+ _ZN11KMessageBox27saveDontShowAgainTwoActionsERK7QStringNS_10ButtonCodeE@Base 5.100.0
+ _ZN11KMessageBox27warningTwoActionsCancelListEP7QWidgetRK7QStringRK11QStringListS4_RK8KGuiItemSA_SA_S4_6QFlagsINS_6OptionEE@Base 5.100.0
  (subst)_ZN11KMessageBox28warningContinueCancelListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S2_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox29warningContinueCancelDetailedEP7QWidgetRK7QStringS4_RK8KGuiItemS7_S4_6QFlagsINS_6OptionEES4_@Base 5.61.0
+ (subst)_ZN11KMessageBox30warningTwoActionsCancelListWIdE{quintptr}RK7QStringRK11QStringListS2_RK8KGuiItemS8_S8_S2_6QFlagsINS_6OptionEE@Base 5.100.0
  _ZN11KMessageBox5aboutEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox5errorEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE@Base 4.96.0
+ _ZN11KMessageBox5errorEP7QWidgetRK7QStringS4_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.97.0
  _ZN11KMessageBox5sorryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE@Base 4.96.0
  _ZN11KMessageBox5sorryEP7QWidgetRK7QStringS4_RK8KGuiItem6QFlagsINS_6OptionEE@Base 5.69.0
  (subst)_ZN11KMessageBox8errorWIdE{quintptr}RK7QStringS2_6QFlagsINS_6OptionEE@Base 4.96.0
@@ -637,6 +656,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN14KMessageDialog10setDetailsERK7QString@Base 5.77.0
  _ZN14KMessageDialog11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.77.0
  _ZN14KMessageDialog11qt_metacastEPKc@Base 5.77.0
+ _ZN14KMessageDialog16setNotifyEnabledEb@Base 5.97.0
  _ZN14KMessageDialog16staticMetaObjectE@Base 5.77.0
  _ZN14KMessageDialog18setListWidgetItemsERK11QStringList@Base 5.77.0
  _ZN14KMessageDialog19setDontAskAgainTextERK7QString@Base 5.77.0
@@ -660,6 +680,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN14KMessageWidget11setWordWrapEb@Base 4.96.0
  _ZN14KMessageWidget12animatedHideEv@Base 4.96.0
  _ZN14KMessageWidget12animatedShowEv@Base 4.96.0
+ _ZN14KMessageWidget12clearActionsEv@Base 5.100.0
  _ZN14KMessageWidget12removeActionEP7QAction@Base 4.96.0
  _ZN14KMessageWidget13linkActivatedERK7QString@Base 4.96.0
  _ZN14KMessageWidget14setMessageTypeENS_11MessageTypeE@Base 4.96.0
@@ -901,6 +922,19 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN16KAssistantDialogD0Ev@Base 4.96.0
  _ZN16KAssistantDialogD1Ev@Base 4.96.0
  _ZN16KAssistantDialogD2Ev@Base 4.96.0
+ _ZN16KDatePickerPopup10setDateMapERK4QMapI5QDate7QStringE@Base 5.94.0
+ _ZN16KDatePickerPopup11dateChangedERK5QDate@Base 5.94.0
+ _ZN16KDatePickerPopup11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.94.0
+ _ZN16KDatePickerPopup11qt_metacastEPKc@Base 5.94.0
+ _ZN16KDatePickerPopup12setDateRangeERK5QDateS2_@Base 5.94.0
+ _ZN16KDatePickerPopup16staticMetaObjectE@Base 5.94.0
+ _ZN16KDatePickerPopup7setDateE5QDate@Base 5.94.0
+ _ZN16KDatePickerPopup8setModesE6QFlagsINS_4ModeEE@Base 5.94.0
+ _ZN16KDatePickerPopupC1E6QFlagsINS_4ModeEE5QDateP7QWidget@Base 5.94.0
+ _ZN16KDatePickerPopupC2E6QFlagsINS_4ModeEE5QDateP7QWidget@Base 5.94.0
+ _ZN16KDatePickerPopupD0Ev@Base 5.94.0
+ _ZN16KDatePickerPopupD1Ev@Base 5.94.0
+ _ZN16KDatePickerPopupD2Ev@Base 5.94.0
  _ZN16KMimeTypeChooser11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
  _ZN16KMimeTypeChooser11qt_metacastEPKc@Base 4.96.0
  _ZN16KMimeTypeChooser16staticMetaObjectE@Base 4.96.0
@@ -933,7 +967,9 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZN16KRecentFilesMenu12readFromFileEv@Base 5.74.0
  _ZN16KRecentFilesMenu12urlTriggeredERK4QUrl@Base 5.74.0
  (subst)_ZN16KRecentFilesMenu15setMaximumItemsE{size_t}@Base 5.74.0
+ _ZN16KRecentFilesMenu16clearRecentFilesEv@Base 5.101.0
  _ZN16KRecentFilesMenu16staticMetaObjectE@Base 5.74.0
+ _ZN16KRecentFilesMenu18recentFilesChangedEv@Base 5.101.0
  _ZN16KRecentFilesMenu6addUrlERK4QUrlRK7QString@Base 5.74.0
  _ZN16KRecentFilesMenu8setGroupERK7QString@Base 5.74.0
  _ZN16KRecentFilesMenu9removeUrlERK4QUrl@Base 5.74.0
@@ -1677,6 +1713,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK14KFontRequester5titleEv@Base 4.96.0
  _ZNK14KFontRequester6buttonEv@Base 4.96.0
  _ZNK14KMessageDialog10metaObjectEv@Base 5.77.0
+ _ZNK14KMessageDialog15isNotifyEnabledEv@Base 5.97.0
  _ZNK14KMessageDialog21isDontAskAgainCheckedEv@Base 5.77.0
  _ZNK14KMessageWidget10metaObjectEv@Base 4.96.0
  _ZNK14KMessageWidget11messageTypeEv@Base 4.96.0
@@ -1775,6 +1812,10 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK16KAssistantDialog12finishButtonEv@Base 4.98.0
  _ZNK16KAssistantDialog13isAppropriateEP15KPageWidgetItem@Base 4.96.0
  _ZNK16KAssistantDialog7isValidEP15KPageWidgetItem@Base 4.96.0
+ _ZNK16KDatePickerPopup10datePickerEv@Base 5.94.0
+ _ZNK16KDatePickerPopup10metaObjectEv@Base 5.94.0
+ _ZNK16KDatePickerPopup5modesEv@Base 5.94.0
+ _ZNK16KDatePickerPopup7dateMapEv@Base 5.94.0
  _ZNK16KMimeTypeChooser10metaObjectEv@Base 4.96.0
  _ZNK16KMimeTypeChooser8patternsEv@Base 4.96.0
  _ZNK16KMimeTypeChooser9mimeTypesEv@Base 4.96.0
@@ -1788,6 +1829,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZNK16KPageWidgetModel6parentERK11QModelIndex@Base 4.96.0
  _ZNK16KPageWidgetModel8rowCountERK11QModelIndex@Base 4.96.0
  _ZNK16KRecentFilesMenu10metaObjectEv@Base 5.74.0
+ _ZNK16KRecentFilesMenu11recentFilesEv@Base 5.101.0
  _ZNK16KRecentFilesMenu12maximumItemsEv@Base 5.74.0
  _ZNK16KRecentFilesMenu5groupEv@Base 5.74.0
  _ZNK17KGradientSelector10firstColorEv@Base 4.96.0
@@ -1995,6 +2037,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTI15KPasswordDialog@Base 4.96.0
  _ZTI15KTwoFingerSwipe@Base 5.88.0
  _ZTI16KAssistantDialog@Base 4.96.0
+ _ZTI16KDatePickerPopup@Base 5.94.0
  _ZTI16KMimeTypeChooser@Base 4.96.0
  _ZTI16KPageWidgetModel@Base 4.96.0
  _ZTI16KRecentFilesMenu@Base 5.74.0
@@ -2067,6 +2110,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTS15KPasswordDialog@Base 4.96.0
  _ZTS15KTwoFingerSwipe@Base 5.88.0
  _ZTS16KAssistantDialog@Base 4.96.0
+ _ZTS16KDatePickerPopup@Base 5.94.0
  _ZTS16KMimeTypeChooser@Base 4.96.0
  _ZTS16KPageWidgetModel@Base 4.96.0
  _ZTS16KRecentFilesMenu@Base 5.74.0
@@ -2139,6 +2183,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  _ZTV15KPasswordDialog@Base 4.96.0
  _ZTV15KTwoFingerSwipe@Base 5.88.0
  _ZTV16KAssistantDialog@Base 4.96.0
+ _ZTV16KDatePickerPopup@Base 5.94.0
  _ZTV16KMimeTypeChooser@Base 4.96.0
  _ZTV16KPageWidgetModel@Base 4.96.0
  _ZTV16KRecentFilesMenu@Base 5.74.0
@@ -2184,6 +2229,7 @@ libKF5WidgetsAddons.so.5 libkf5widgetsaddons5 #MINVER#
  (c++)"non-virtual thunk to KColorCombo::~KColorCombo()@Base" 4.96.0
  (c++)"non-virtual thunk to KDateComboBox::~KDateComboBox()@Base" 4.96.0
  (c++)"non-virtual thunk to KDatePicker::~KDatePicker()@Base" 4.96.0
+ (c++)"non-virtual thunk to KDatePickerPopup::~KDatePickerPopup()@Base" 5.94.0
  (c++)"non-virtual thunk to KDateTimeEdit::~KDateTimeEdit()@Base" 4.96.0
  (c++)"non-virtual thunk to KEditListWidget::~KEditListWidget()@Base" 4.96.0
  (c++)"non-virtual thunk to KFontChooser::~KFontChooser()@Base" 4.96.0

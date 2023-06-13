@@ -1,4 +1,3 @@
-/usr/include/KF5/kwidgetsaddons_version.h
 usr/include/KF5/KWidgetsAddons/
 usr/lib/*/cmake/KF5WidgetsAddons/
 usr/lib/*/libKF5WidgetsAddons.so
