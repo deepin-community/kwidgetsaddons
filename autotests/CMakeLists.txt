@@ -10,6 +10,8 @@ ecm_add_tests(
   kcollapsiblegroupbox_test.cpp
   kcolorbuttontest.cpp
   kdatecomboboxtest.cpp
+  kdatepickerautotest.cpp
+  kdatepickerpopupautotest.cpp
   kdatetimeedittest.cpp
   kdualactiontest.cpp
   kpixmapsequencewidgettest.cpp

@@ -6,6 +6,7 @@
 */
 
 #include "kmessagedialog.h"
+#include "kmessagebox_p.h"
 
 #include "loggingcategory.h"
 
@@ -31,13 +32,57 @@
 
 static const Qt::TextInteractionFlags s_textFlags = Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
 
-class KMessageDialogPrivate
+// TODO KF6 remove QObject inheritance again
+class KMessageDialogPrivate : public QObject
 {
+    Q_OBJECT
+
 public:
     explicit KMessageDialogPrivate(KMessageDialog::Type type, KMessageDialog *qq)
         : m_type(type)
         , q(qq)
     {
+    }
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (event->type() == QEvent::Show && watched == q) {
+            Q_ASSERT(m_notifyEnabled);
+            doNotify();
+        }
+        return false;
+    }
+#endif
+
+    void doNotify()
+    {
+#ifndef Q_OS_WIN // FIXME problems with KNotify on Windows
+        QMessageBox::Icon notifyType = QMessageBox::NoIcon;
+        switch (m_type) {
+        case KMessageDialog::QuestionTwoActions:
+        case KMessageDialog::QuestionTwoActionsCancel:
+            notifyType = QMessageBox::Question;
+            break;
+        case KMessageDialog::WarningTwoActions:
+        case KMessageDialog::WarningTwoActionsCancel:
+        case KMessageDialog::WarningContinueCancel:
+        case KMessageDialog::Information:
+            notifyType = QMessageBox::Information;
+            break;
+        case KMessageDialog::Error:
+            notifyType = QMessageBox::Critical;
+            break;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+        case KMessageDialog::Sorry:
+            notifyType = QMessageBox::Warning;
+            break;
+#endif
+        }
+
+        // TODO include m_listWidget items
+        KMessageBox::notifyInterface()->sendNotification(notifyType, m_messageLabel->text(), q->topLevelWidget());
+#endif
     }
 
     KMessageDialog::Type m_type;
@@ -53,6 +98,7 @@ public:
     QCheckBox *m_dontAskAgainCB = nullptr;
     QDialogButtonBox *m_buttonBox = nullptr;
     QMetaObject::Connection m_buttonBoxConnection;
+    bool m_notifyEnabled = true;
 };
 
 KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent)
@@ -142,8 +188,27 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     // Button box
     d->m_buttonBox = new QDialogButtonBox(this);
     d->m_topLayout->addWidget(d->m_buttonBox);
+
     // Default buttons
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
     setButtons();
+#else
+    if ((d->m_type == KMessageDialog::Information) || (d->m_type != KMessageDialog::Error)) {
+        // set Ok button
+        setButtons();
+    } else if ((d->m_type == KMessageDialog::WarningContinueCancel)) {
+        // set Continue & Cancel buttons
+        setButtons(KStandardGuiItem::cont(), KGuiItem(), KStandardGuiItem::cancel());
+    }
+#endif
+
+    setNotifyEnabled(true);
+
+    // If the dialog is rejected, e.g. by pressing Esc, done() signal connected to the button box
+    // won't be emitted
+    connect(this, &QDialog::rejected, this, [this]() {
+        done(KMessageDialog::Cancel);
+    });
 }
 
 // This method has been copied from KWindowSystem to avoid depending on it
@@ -182,6 +247,7 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, W
 
 KMessageDialog::~KMessageDialog()
 {
+    removeEventFilter(d.get());
 }
 
 void KMessageDialog::setCaption(const QString &caption)
@@ -193,21 +259,23 @@ void KMessageDialog::setCaption(const QString &caption)
 
     QString title;
     switch (d->m_type) { // Get a title based on the dialog Type
-    case KMessageDialog::QuestionYesNo:
-    case KMessageDialog::QuestionYesNoCancel:
+    case KMessageDialog::QuestionTwoActions:
+    case KMessageDialog::QuestionTwoActionsCancel:
         title = QApplication::translate("KMessageDialog", "Question");
         break;
-    case KMessageDialog::WarningYesNo:
-    case KMessageDialog::WarningYesNoCancel:
+    case KMessageDialog::WarningTwoActions:
+    case KMessageDialog::WarningTwoActionsCancel:
     case KMessageDialog::WarningContinueCancel:
         title = QApplication::translate("KMessageDialog", "Warning");
         break;
     case KMessageDialog::Information:
         title = QApplication::translate("KMessageDialog", "Information");
         break;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
     case KMessageDialog::Sorry:
         title = QApplication::translate("KMessageDialog", "Sorry");
         break;
+#endif
     case KMessageDialog::Error: {
         title = QApplication::translate("KMessageDialog", "Error");
         break;
@@ -225,14 +293,16 @@ void KMessageDialog::setIcon(const QIcon &icon)
     if (effectiveIcon.isNull()) { // Fallback to an icon based on the dialog Type
         QStyle *style = this->style();
         switch (d->m_type) {
-        case KMessageDialog::QuestionYesNo:
-        case KMessageDialog::QuestionYesNoCancel:
+        case KMessageDialog::QuestionTwoActions:
+        case KMessageDialog::QuestionTwoActionsCancel:
             effectiveIcon = style->standardIcon(QStyle::SP_MessageBoxQuestion, nullptr, this);
             break;
-        case KMessageDialog::WarningYesNo:
-        case KMessageDialog::WarningYesNoCancel:
+        case KMessageDialog::WarningTwoActions:
+        case KMessageDialog::WarningTwoActionsCancel:
         case KMessageDialog::WarningContinueCancel:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
         case KMessageDialog::Sorry:
+#endif
             effectiveIcon = style->standardIcon(QStyle::SP_MessageBoxWarning, nullptr, this);
             break;
         case KMessageDialog::Information:
@@ -298,43 +368,43 @@ void KMessageDialog::setDetails(const QString &details)
     d->m_detailsTextEdit->setText(details);
 }
 
-void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &buttonNo, const KGuiItem &buttonCancel)
+void KMessageDialog::setButtons(const KGuiItem &primaryAction, const KGuiItem &secondaryAction, const KGuiItem &cancelAction)
 {
     switch (d->m_type) {
-    case KMessageDialog::QuestionYesNo: {
+    case KMessageDialog::QuestionTwoActions: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
         auto *buttonYes = d->m_buttonBox->button(QDialogButtonBox::Yes);
-        KGuiItem::assign(buttonYes, buttonAccept);
+        KGuiItem::assign(buttonYes, primaryAction);
         buttonYes->setFocus();
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), secondaryAction);
         break;
     }
-    case KMessageDialog::QuestionYesNoCancel: {
+    case KMessageDialog::QuestionTwoActionsCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
         auto *buttonYes = d->m_buttonBox->button(QDialogButtonBox::Yes);
-        KGuiItem::assign(buttonYes, buttonAccept);
+        KGuiItem::assign(buttonYes, primaryAction);
         buttonYes->setFocus();
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Cancel), buttonCancel);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), secondaryAction);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Cancel), cancelAction);
         break;
     }
-    case KMessageDialog::WarningYesNo: {
+    case KMessageDialog::WarningTwoActions: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), primaryAction);
 
         auto *noBtn = d->m_buttonBox->button(QDialogButtonBox::No);
-        KGuiItem::assign(noBtn, buttonNo);
+        KGuiItem::assign(noBtn, secondaryAction);
         noBtn->setDefault(true);
         noBtn->setFocus();
         break;
     }
-    case KMessageDialog::WarningYesNoCancel: {
+    case KMessageDialog::WarningTwoActionsCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), primaryAction);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), secondaryAction);
 
         auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
-        KGuiItem::assign(cancelButton, buttonCancel);
+        KGuiItem::assign(cancelButton, cancelAction);
         cancelButton->setDefault(true);
         cancelButton->setFocus();
         break;
@@ -342,20 +412,26 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
     case KMessageDialog::WarningContinueCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::Cancel);
 
-        KGuiItem buttonContinue = buttonAccept;
-        if (buttonContinue.text() == KStandardGuiItem::yes().text()) {
-            buttonContinue = KStandardGuiItem::cont();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
+        KGuiItem continueItem = primaryAction;
+        if (continueItem.text() == KStandardGuiItem::yes().text()) {
+            continueItem = KStandardGuiItem::cont();
         }
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonContinue);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), continueItem);
+#else
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), primaryAction);
+#endif
 
         auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
-        KGuiItem::assign(cancelButton, buttonCancel);
+        KGuiItem::assign(cancelButton, cancelAction);
         cancelButton->setDefault(true);
         cancelButton->setFocus();
         break;
     }
     case KMessageDialog::Information:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
     case KMessageDialog::Sorry:
+#endif
     case KMessageDialog::Error: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Ok);
         auto *okButton = d->m_buttonBox->button(QDialogButtonBox::Ok);
@@ -371,8 +447,14 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
     if (!d->m_buttonBoxConnection) {
         d->m_buttonBoxConnection = connect(d->m_buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton *button) {
             QDialogButtonBox::StandardButton code = d->m_buttonBox->standardButton(button);
-            if (code != QDialogButtonBox::NoButton) {
-                done(code);
+            const int result = (code == QDialogButtonBox::Ok) ? KMessageDialog::Ok
+                : (code == QDialogButtonBox::Cancel)          ? KMessageDialog::Cancel
+                : (code == QDialogButtonBox::Yes)             ? KMessageDialog::PrimaryAction
+                : (code == QDialogButtonBox::No)              ? KMessageDialog::SecondaryAction
+                                                              :
+                                                 /* else */ -1;
+            if (result != -1) {
+                done(result);
             }
         });
     }
@@ -413,3 +495,32 @@ void KMessageDialog::setOpenExternalLinks(bool isAllowed)
     d->m_messageLabel->setOpenExternalLinks(isAllowed);
     d->m_detailsTextEdit->setOpenExternalLinks(isAllowed);
 }
+
+bool KMessageDialog::isNotifyEnabled() const
+{
+    return d->m_notifyEnabled;
+}
+
+void KMessageDialog::setNotifyEnabled(bool enable)
+{
+    d->m_notifyEnabled = enable;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    if (enable) {
+        installEventFilter(d.get());
+    } else {
+        removeEventFilter(d.get());
+    }
+#endif
+}
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+void KMessageDialog::showEvent(QShowEvent *event)
+{
+    if (d->m_notifyEnabled) {
+        d->doNotify();
+    }
+    QDialog::showEvent(event);
+}
+#endif
+
+#include "kmessagedialog.moc"

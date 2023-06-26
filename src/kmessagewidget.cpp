@@ -39,7 +39,6 @@ public:
     QTimeLine *timeLine = nullptr;
     QIcon icon;
     bool ignoreShowAndResizeEventDoingAnimatedShow = false;
-
     KMessageWidget::MessageType messageType;
     bool wordWrap;
     QList<QToolButton *> buttons;
@@ -109,6 +108,8 @@ void KMessageWidgetPrivate::createLayout()
         QToolButton *button = new QToolButton(q);
         button->setDefaultAction(action);
         button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        auto previous = buttons.isEmpty() ? static_cast<QWidget *>(textLabel) : buttons.back();
+        QWidget::setTabOrder(previous, button);
         buttons.append(button);
     }
 
@@ -141,13 +142,13 @@ void KMessageWidgetPrivate::createLayout()
         }
     } else {
         QHBoxLayout *layout = new QHBoxLayout(q);
-        layout->addWidget(iconLabel);
+        layout->addWidget(iconLabel, 0, Qt::AlignTop);
         layout->addWidget(textLabel);
 
         for (QToolButton *button : std::as_const(buttons)) {
-            layout->addWidget(button);
+            layout->addWidget(button, 0, Qt::AlignTop);
         }
-        layout->addWidget(closeButton);
+        layout->addWidget(closeButton, 0, Qt::AlignTop);
     };
     // Add bordersize to the margin so it starts from the inner border and doesn't look too cramped
     q->layout()->setContentsMargins(q->layout()->contentsMargins() + borderSize);
@@ -369,6 +370,15 @@ void KMessageWidget::addAction(QAction *action)
 void KMessageWidget::removeAction(QAction *action)
 {
     QFrame::removeAction(action);
+    d->updateLayout();
+}
+
+void KMessageWidget::clearActions()
+{
+    const auto ourActions = actions();
+    for (auto *action : ourActions) {
+        removeAction(action);
+    }
     d->updateLayout();
 }
 

@@ -81,6 +81,7 @@ public:
 protected:
     bool eventFilter(QObject *object, QEvent *event) override;
 
+    // KF6 TODO: remove
 protected Q_SLOTS:
     void slotToggled(bool checked) override;
 

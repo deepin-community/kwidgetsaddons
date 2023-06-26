@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.90.0") # handled by release scripts
+set(KF_VERSION "5.103.0") # handled by release scripts
 project(KWidgetsAddons VERSION ${KF_VERSION})
 
 include(FeatureSummary)
-find_package(ECM 5.90.0  NO_MODULE)
+find_package(ECM 5.103.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -14,7 +14,10 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
+
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
+
 set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
@@ -26,6 +29,7 @@ include(ECMGenerateHeaders)
 include(ECMAddQch)
 include(ECMPoQmTools)
 include(ECMQtDeclareLoggingCategory)
+include(CMakeDependentOption)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"
@@ -37,15 +41,17 @@ set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprec
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
-option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
+cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "NOT CMAKE_CROSSCOMPILING" OFF)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 
-ecm_install_po_files_as_qm(po)
+ecm_install_po_files_as_qm(poqm)
 
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # Not 050f00 because we need QLabel::pixmap(), in a deprecated method
+ecm_set_disabled_deprecation_versions(
+    QT 5.14 # QLabel::pixmap(), cannot be ported, but in a deprecated method
+)
 
 add_subdirectory(src)
 if (BUILD_TESTING)
@@ -81,7 +87,7 @@ install(EXPORT KF5WidgetsAddonsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" 
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
